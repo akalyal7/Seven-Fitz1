@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Tailwind v4 theme configuration */
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Outfit", sans-serif;
+
+  /* Luxury Palette: Gold, Black, White */
+  --color-primary-50: #fefaf0;
+  --color-primary-100: #fdf5e0;
+  --color-primary-200: #faeab8;
+  --color-primary-300: #f7df91;
+  --color-primary-400: #f1c94d;
+  --color-primary-500: #d4af37;
+  /* Metallic Gold */
+  --color-primary-600: #b8932e;
+  --color-primary-700: #9c7d27;
+  --color-primary-800: #816620;
+  --color-primary-900: #69531a;
+  --color-primary-950: #3b2f0f;
+
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+  /* Deep Black/Slate */
+  --color-secondary-950: #020617;
+
+  --color-accent-50: #fdfdfd;
+  --color-accent-100: #f7f7f7;
+  --color-accent-200: #e5e5e5;
+  --color-accent-300: #d4d4d4;
+  --color-accent-400: #a3a3a3;
+  --color-accent-500: #737373;
+  --color-accent-600: #525252;
+  --color-accent-700: #404040;
+  --color-accent-800: #262626;
+  --color-accent-900: #171717;
+  --color-accent-950: #0a0a0a;
+
+  --color-gold: #d4af37;
+
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.8s ease-out forwards;
+
+  @keyframes shimmer {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    @apply bg-white text-secondary-900;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif tracking-tight text-secondary-900;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-2xl border-b border-secondary-100 shadow-sm;
+  }
+
+  .glass-dark {
+    @apply bg-black/80 backdrop-blur-2xl border border-white/5 shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply px-10 py-4 bg-secondary-900 text-white font-bold rounded-full hover:bg-primary-500 hover:text-secondary-900 transition-all duration-500 active:scale-95 disabled:bg-secondary-200 flex items-center justify-center gap-2 border border-secondary-900 hover:border-primary-500;
+  }
+
+  .btn-outline {
+    @apply px-10 py-4 bg-transparent text-secondary-900 border-2 border-secondary-900 font-bold rounded-full hover:bg-secondary-900 hover:text-white transition-all duration-500 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-gold {
+    @apply px-10 py-4 bg-primary-500 text-secondary-900 border border-primary-500 font-bold rounded-full hover:bg-secondary-900 hover:text-primary-500 transition-all duration-500 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .input-field {
+    @apply w-full px-6 py-4 bg-secondary-50 border border-secondary-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 md:px-12 lg:px-16;
+  }
+
+  .section-header {
+    @apply text-center max-w-3xl mx-auto mb-16 md:mb-24;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-4xl border border-secondary-100 shadow-xs hover:shadow-2xl hover:shadow-primary-500/5 transition-all duration-700 overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .reveal-up {
+    @apply translate-y-8 opacity-0 transition-all duration-1000 ease-out;
+  }
+
+  .reveal-up.active {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-primary-500 via-primary-300 to-primary-500 bg-size-[200%_auto] animate-shimmer;
+  }
+
+  .bg-mesh-dark {
+    background-image:
+      radial-gradient(at 0% 0%, hsla(0, 0%, 0%, 1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(45, 65%, 52%, 0.1) 0, transparent 50%);
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+}

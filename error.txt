@@ -1,0 +1,111 @@
+﻿
+> example7fitz@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 5 modules transformed.
+node.exe : 
+[31mΓ£ù[39m Build 
+failed in 316ms
+At line:1 char:1
++ & "C:\Program Files
+\nodejs/node.exe" "C:
+\Users\Akash\AppData\
+Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: ([31mΓ£   
+ ù[39m Build fai    
+led in 316ms:Str    
+ing) [], RemoteE    
+xception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+[31merror during 
+build:
+[31m[@tailwindcss/vi
+te:generate:build] 
+Cannot apply unknown 
+utility class `animat
+e-shimmer`[31m
+file: [36mD:/L-7 
+Softech works/7-Fitz 
+website/Example7fitz/
+src/index.css[31m
+    at 
+onInvalidCandidate (f
+ile:///D:/L-7%20Softe
+ch%20works/7-Fitz%20w
+ebsite/Example7fitz/n
+ode_modules/tailwindc
+ss/dist/chunk-CT46QCH
+7.mjs:21:1511)
+    at Ce (file:///D:
+/L-7%20Softech%20work
+s/7-Fitz%20website/Ex
+ample7fitz/node_modul
+es/tailwindcss/dist/c
+hunk-CT46QCH7.mjs:16:
+36652)
+    at file:///D:/L-7
+%20Softech%20works/7-
+Fitz%20website/Exampl
+e7fitz/node_modules/t
+ailwindcss/dist/chunk
+-CT46QCH7.mjs:21:355
+    at br (file:///D:
+/L-7%20Softech%20work
+s/7-Fitz%20website/Ex
+ample7fitz/node_modul
+es/tailwindcss/dist/c
+hunk-CT46QCH7.mjs:3:1
+718)
+    at I (file:///D:/
+L-7%20Softech%20works
+/7-Fitz%20website/Exa
+mple7fitz/node_module
+s/tailwindcss/dist/ch
+unk-CT46QCH7.mjs:3:13
+77)
+    at Ae (file:///D:
+/L-7%20Softech%20work
+s/7-Fitz%20website/Ex
+ample7fitz/node_modul
+es/tailwindcss/dist/c
+hunk-CT46QCH7.mjs:21:
+172)
+    at Wi (file:///D:
+/L-7%20Softech%20work
+s/7-Fitz%20website/Ex
+ample7fitz/node_modul
+es/tailwindcss/dist/c
+hunk-CT46QCH7.mjs:38:
+294)
+    at async Za (file
+:///D:/L-7%20Softech%
+20works/7-Fitz%20webs
+ite/Example7fitz/node
+_modules/tailwindcss/
+dist/chunk-CT46QCH7.m
+js:38:631)
+    at async rf (file
+:///D:/L-7%20Softech%
+20works/7-Fitz%20webs
+ite/Example7fitz/node
+_modules/tailwindcss/
+dist/chunk-CT46QCH7.m
+js:38:1406)
+    at async lu (file
+:///D:/L-7%20Softech%
+20works/7-Fitz%20webs
+ite/Example7fitz/node
+_modules/@tailwindcss
+/node/dist/index.mjs:
+10:3458)[39m
