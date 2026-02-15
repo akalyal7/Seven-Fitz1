@@ -6,11 +6,11 @@ import { products } from '../../data/products';
 import ProductCard from '../product/ProductCard';
 
 const FeaturedProducts = () => {
-    const featuredProducts = products.filter(p => p.isFeatured).slice(0, 4);
+    const featuredProducts = products.filter(p => p.isFeatured).slice(0, 8);
 
     return (
         <section className="py-10 bg-slate-50 overflow-hidden relative">
-            <div className="p-10 rounded-lg relative z-10">
+            <div className="p-12 rounded-lg relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -25,21 +25,18 @@ const FeaturedProducts = () => {
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
                     {featuredProducts.map(product => (
                         <ProductCard key={product.id} product={product} />
                     ))}
                 </div>
 
-                <div className="mt-12 text-center">
-                    <Link
-                        to="/shop"
-                        className="text-black font-bold flex items-center justify-center gap-3 hover:text-[#e5a852] transition-colors uppercase tracking-widest text-sm"
-                    >
-                        Browse the Full Catalog
-                        <Plus size={16} />
-                    </Link>
+                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-7 ">
+                    {featuredProducts.map(product => (
+                        <ProductCard key={product.id} product={product} />
+                    ))}
                 </div>
+               
             </div>
         </section>
     );

@@ -18,7 +18,7 @@ const Home = () => {
       <FeaturedProducts />
       <Categories />
       <NewArrivals />
-      <SocialGallery />
+      {/* <SocialGallery /> */}
     </div>
   );
 };

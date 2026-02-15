@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const NewArrivals = () => {
     return (
-        <section className="relative h-[600px] overflow-hidden">
+        <section className="relative h-150 overflow-hidden">
             {/* Background Video */}
             <video
                 autoPlay
@@ -57,7 +57,7 @@ const NewArrivals = () => {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-white/40 to-transparent" />
         </section>
     );
 };

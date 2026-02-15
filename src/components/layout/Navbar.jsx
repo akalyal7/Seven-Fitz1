@@ -86,7 +86,7 @@ const Navbar = () => {
       </AnimatePresence>
 
       {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-3">
+      <div className="max-w-7xl mx-auto px-2 flex items-center justify-between py-3">
 
         {/* Logo */}
         <Link to="/" className="relative group">

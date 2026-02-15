@@ -10,7 +10,6 @@ export const products = [
             "https://media.istockphoto.com/id/638728906/photo/beautiful-indian-woman.jpg?s=612x612&w=0&k=20&c=qE80pJKNMtZBzeljH3WZRmf77reR9B6CJCQEWi470zM="
         ],
         sizes: ["XS", "S", "M", "L", "XL"],
-        colors: ["Emerald", "Midnight Blue", "Rose Gold"],
         rating: 4.8,
         reviews: 124,
         isNew: true,
@@ -28,7 +27,6 @@ export const products = [
             "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&auto=format&fit=crop&q=60"
         ],
         sizes: ["S", "M", "L", "XL"],
-        colors: ["Beige", "Ivory", "Sage"],
         rating: 4.5,
         reviews: 82,
         isNew: false,
@@ -46,7 +44,6 @@ export const products = [
             "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&auto=format&fit=crop&q=60"
         ],
         sizes: ["XS", "S", "M", "L"],
-        colors: ["Olive", "Black", "Sand"],
         rating: 4.2,
         reviews: 56,
         isNew: true,
@@ -64,7 +61,6 @@ export const products = [
             "https://images.unsplash.com/photo-1583912267550-d44d7a125e7e?w=600&auto=format&fit=crop&q=60"
         ],
         sizes: ["S", "M", "L"],
-        colors: ["Heather Gray", "Oatmeal", "Burgundy"],
         rating: 4.9,
         reviews: 210,
         isNew: false,
@@ -82,7 +78,6 @@ export const products = [
             "https://media.istockphoto.com/id/1493546386/photo/beautiful-indian-young-woman-in-traditional-saree.jpg?s=612x612&w=0&k=20&c=-ZBkFBcx557St-EGmFPWEQY7lGnFlwNLpSGLCZzlqO0="
         ],
         sizes: ["XS", "S", "M", "L"],
-        colors: ["Midnight Blue", "Black", "Rose Gold"],
         rating: 5.0,
         reviews: 45,
         isNew: true,
@@ -100,7 +95,6 @@ export const products = [
             "https://images.unsplash.com/photo-1544022613-e87ce75c75c4?w=600&auto=format&fit=crop&q=60"
         ],
         sizes: ["S", "M", "L", "XL"],
-        colors: ["Beige", "Heather Gray", "Black"],
         rating: 4.7,
         reviews: 89,
         isNew: false,
@@ -118,7 +112,6 @@ export const products = [
             "https://images.unsplash.com/photo-1509556756506-191500916359?w=600&auto=format&fit=crop&q=60"
         ],
         sizes: ["XS", "S", "M", "L"],
-        colors: ["Sage", "Ivory", "Black"],
         rating: 4.4,
         reviews: 67,
         isNew: true,
@@ -136,13 +129,81 @@ export const products = [
             "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
         ],
         sizes: ["S", "M", "L"],
-        colors: ["Oatmeal", "Sage", "Heather Gray"],
         rating: 4.6,
         reviews: 112,
         isNew: false,
         isFeatured: false,
         subcategory: "Straight"
-    }
+    },
+    {
+        id: 9,
+        name: "Ribbed Knit Cardigan",
+        price: 78.00,
+        category: "Kurti",
+        description: "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+        images: [
+            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
+        ],
+        sizes: ["S", "M", "L"],
+        rating: 4.6,
+        reviews: 112,
+        isNew: false,
+        isFeatured: false,
+        subcategory: "Straight"
+    },
+    {
+        id: 10,
+        name: "Ribbed Knit Cardigan",
+        price: 78.00,
+        category: "Kurti",
+        description: "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+        images: [
+            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
+        ],
+        sizes: ["S", "M", "L"],
+        rating: 4.6,
+        reviews: 112,
+        isNew: false,
+        isFeatured: false,
+        subcategory: "Straight"
+    },
+    {
+        id: 11,
+        name: "Ribbed Knit Cardigan",
+        price: 78.00,
+        category: "Kurti",
+        description: "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+        images: [
+            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
+        ],
+        sizes: ["S", "M", "L"],
+        rating: 4.6,
+        reviews: 112,
+        isNew: false,
+        isFeatured: false,
+        subcategory: "Straight"
+    },
+      {
+        id: 12,
+        name: "Ribbed Knit Cardigan",
+        price: 78.00,
+        category: "Kurti",
+        description: "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+        images: [
+            "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
+        ],
+        sizes: ["S", "M", "L"],
+        rating: 4.6,
+        reviews: 112,
+        isNew: false,
+        isFeatured: false,
+        subcategory: "Straight"
+    },
+    
 ];
 
 export const categories = [
