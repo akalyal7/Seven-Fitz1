@@ -71,19 +71,7 @@ const Navbar = () => {
           : 'bg-black border-b border-yellow-600/10'
       }`}
     >
-      {/* Top Bar */}
-      <AnimatePresence>
-        {!scrolled && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="bg-[#e5a852] text-[10px] sm:text-xs text-center py-1 text-black tracking-[0.2em] font-serif font-bold overflow-hidden"
-          >
-            ALL DRESSES AT BEST PRICE!
-          </motion.div>
-        )}
-      </AnimatePresence>
+      
 
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-2 flex items-center justify-between py-3">

@@ -22,19 +22,6 @@ const Hero = () => {
             className="relative"
           >
             
-            {/* Decorative Stars */}
-            <div className="absolute -top-10 -left-6 text-[#e5a852] animate-pulse">
-              <Plus size={20} strokeWidth={1} />
-            </div>
-
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="inline-block text-[#e5a852] font-serif italic text-base mb-4"
-            >
-              Exclusive Women's Couture
-            </motion.span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] mb-6 text-black">
               The Ultimate <br />
@@ -51,7 +38,7 @@ const Hero = () => {
               
               <Link
                 to="/shop"
-                className="bg-black text-[#e5a852] px-8 py-3 rounded-full font-bold hover:bg-[#e5a852] hover:text-black transition-all duration-300 shadow-xl shadow-black/10 flex items-center gap-2 group"
+                className="bg-black text-[#e5a852] px-7 py-2 rounded-full font-bold hover:bg-[#e5a852] hover:text-black transition-all duration-300 shadow-xl shadow-black/10 flex items-center gap-2 group"
               >
                 Explore Collection
                 <ArrowRight
@@ -62,13 +49,9 @@ const Hero = () => {
 
               <Link
                 to="/about"
-                className="bg-white border-2 border-black text-black px-8 py-3 rounded-full font-bold hover:bg-black hover:text-[#e5a852] hover:border-black transition-all duration-300 shadow-lg shadow-black/5 flex items-center gap-2 group"
+                className="bg-white border border-[#e5a852] text-black px-7 py-2 rounded-full font-bold hover:bg-black hover:text-[#e5a852] hover:border-black transition-all duration-300 shadow-lg shadow-black/5 flex items-center gap-2 group"
               >
                 Our Story
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
               </Link>
 
             </div>
@@ -80,13 +63,10 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative w-full max-w-112.5"
+              className="relative w-full max-w-120.5"
             >
               
-              {/* Image Ornament */}
-              <div className="absolute -top-6 -right-6 text-[#e5a852]">
-                <Plus size={28} strokeWidth={1} />
-              </div>
+             
 
               {/* Blob Container */}
               <div className="aspect-square overflow-hidden rounded-lg border border-secondary-200 bg-white p-2 shadow-2xl">
@@ -97,12 +77,7 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Decorative Dots */}
-              <div className="absolute -bottom-10 -right-4 flex flex-col gap-3">
-                <div className="w-4 h-4 rounded-full bg-[#e5a852]/20" />
-                <div className="w-4 h-4 rounded-full bg-[#e5a852]/50" />
-                <div className="w-4 h-4 rounded-full bg-[#e5a852]" />
-              </div>
+              
 
             </motion.div>
           </div>

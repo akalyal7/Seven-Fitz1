@@ -106,7 +106,7 @@
   }
 
   .btn-primary {
-    @apply px-10 py-4 bg-secondary-900 text-white font-bold rounded-full hover:bg-primary-500 hover:text-secondary-900 transition-all duration-500 active:scale-95 disabled:bg-secondary-200 flex items-center justify-center gap-2 border border-secondary-900 hover:border-primary-500;
+    @apply px-10 py-2 bg-secondary-900 text-white font-bold rounded-lg hover:bg-[#e5a852] hover:text-secondary-900 transition-all duration-500 active:scale-95 disabled:bg-secondary-200 flex items-center justify-center gap-2 border border-secondary-900 hover:border-[#e5a852];
   }
 
   .btn-outline {

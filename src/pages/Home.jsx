@@ -7,6 +7,8 @@ import FeaturedProducts from '../components/home/FeaturedProducts';
 import Categories from '../components/home/Categories';
 import NewArrivals from '../components/home/NewArrivals';
 import SocialGallery from '../components/home/SocialGallery';
+import ProductShowcase from '../components/home/ProductShowcase';
+import Testimonials from '../components/home/Testimonials';
 
 const Home = () => {
   return (
@@ -18,7 +20,10 @@ const Home = () => {
       <FeaturedProducts />
       <Categories />
       <NewArrivals />
+      <ProductShowcase />
+      
       {/* <SocialGallery /> */}
+      <Testimonials />
     </div>
   );
 };

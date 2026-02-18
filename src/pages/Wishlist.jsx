@@ -19,13 +19,13 @@ const Wishlist = () => {
 
     if (wishlistItems.length === 0) {
         return (
-            <div className="container mx-auto px-4 py-20 text-center">
-                <div className="w-24 h-24 bg-secondary-900 text-primary-500 rounded-4xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
-                    <Heart size={48} />
+            <div className="container mx-auto px-2 py-50 text-center">
+                <div className="w-24 h-24 bg-black text-[#e5a852] rounded-lg flex items-center justify-center mx-auto mb-8 shadow-2xl">
+                    <Heart size={40} />
                 </div>
                 <h1 className="text-3xl font-serif font-bold mb-4">Your wishlist is empty</h1>
                 <p className="text-secondary-500 mb-8 max-w-md mx-auto">Save your favorite items here and they will be waiting for you when you're ready to make them yours.</p>
-                <Link to="/shop" className="btn-gold inline-flex items-center gap-3 h-16 px-10 uppercase tracking-widest text-sm">
+                <Link to="/shop" className="btn-gold inline-flex items-center gap-3 h-13 px-6 uppercase tracking-widest text-sm">
                     Explore Collection <ArrowRight size={18} />
                 </Link>
             </div>
@@ -33,10 +33,12 @@ const Wishlist = () => {
     }
 
     return (
-        <div className="container mx-auto px-4 md:px-6 py-10">
+        <div className="container mx-auto px-4 md:px-30 py-15">
             <div className="flex items-center justify-between mb-12">
-                <h1 className="text-4xl font-serif font-bold">My Wishlist</h1>
+
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900">My <span className="text-[#e5a852]">Wishlist</span></h1>
                 <span className="bg-secondary-900 px-6 py-2 rounded-full text-[10px] font-black text-primary-500 uppercase tracking-widest shadow-lg">{wishlistItems.length} Saved Items</span>
+                
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -48,7 +50,7 @@ const Wishlist = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-secondary-50"
+                            className="group relative bg-white rounded-lg h-160 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-secondary-50"
                         >
                             <div className="relative aspect-3/4 overflow-hidden bg-secondary-100">
                                 <img

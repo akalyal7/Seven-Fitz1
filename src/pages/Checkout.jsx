@@ -81,7 +81,7 @@ const Checkout = () => {
     }
 
     return (
-        <div className="container mx-auto px-4 md:px-6 py-10">
+        <div className="container mx-auto px-4 md:px-30 py-10">
             <Link to="/cart" className="flex items-center gap-2 text-secondary-500 hover:text-primary-500 mb-8 font-medium transition-colors">
                 <ChevronLeft size={20} /> Back to Cart
             </Link>

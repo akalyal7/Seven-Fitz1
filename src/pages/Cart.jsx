@@ -28,13 +28,13 @@ const Cart = () => {
 
     if (cartItems.length === 0) {
         return (
-            <div className="container mx-auto px-4 py-20 text-center">
+            <div className="container mx-auto px-2 py-50 text-center">
                 <div className="w-24 h-24 bg-black text-[#e5a852] rounded-lg flex items-center justify-center mx-auto mb-8 shadow-2xl">
-                    <ShoppingBag size={48} />
+                    <ShoppingBag size={40} />
                 </div>
-                <h1 className="text-3xl font-serif font-bold mb-4 text-black">Your cart is empty</h1>
+                <h1 className="text-3xl font-serif font-bold mb-4">Your cart is empty</h1>
                 <p className="text-secondary-500 mb-8 max-w-md mx-auto">Looks like you haven't added anything to your cart yet. Explore our collections and find your perfect fit.</p>
-                <Link to="/shop" className="bg-black text-[#e5a852] inline-flex items-center gap-3 h-16 px-10 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-[#e5a852] hover:text-black transition-all">
+                <Link to="/shop" className=" btn-gold inline-flex items-center gap-3 h-13 px-6 uppercase tracking-widest text-sm">
                     Explore Collections <ArrowRight size={18} />
                 </Link>
             </div>
@@ -42,12 +42,13 @@ const Cart = () => {
     }
 
     return (
-        <div className="container mx-auto px-4 md:px-6 py-10">
-            <h1 className="text-4xl font-serif font-bold mb-10">Shopping Cart</h1>
+        <div className="container mx-auto px-4 md:px-30 py-22 md:py-15">
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 ">Shopping <span className="text-[#e5a852]">Cart </span> </h1>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
                 {/* Cart Items */}
-                <div className="lg:col-span-2 space-y-6">
+                <div className="lg:col-span-2 space-y-4">
                     <AnimatePresence>
                         {cartItems.map((item) => (
                             <motion.div
@@ -56,9 +57,9 @@ const Cart = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, x: -100 }}
-                                className="flex gap-6 p-6 bg-white rounded-lg border border-secondary-100 hover:shadow-md transition-shadow relative group"
+                                className="flex gap-6 p-2 bg-white rounded-md border border-secondary-200 hover:shadow-md transition-shadow relative group"
                             >
-                                <div className="w-24 h-32 md:w-32 md:h-40 rounded-lg overflow-hidden bg-slate-50 border border-secondary-50 shrink-0">
+                                <div className="w-24 h-32 md:w-32 md:h-40 rounded-md overflow-hidden bg-slate-50 border border-secondary-50 shrink-0">
                                     <img src={item.images[0]} alt={item.name} className="w-full h-full object-cover" />
                                 </div>
 
@@ -79,8 +80,8 @@ const Cart = () => {
                                             </button>
                                         </div>
                                         <p className="text-sm text-secondary-500 mb-4">
-                                            Size: <span className="text-secondary-900 font-semibold">{item.selectedSize}</span> |
-                                            Color: <span className="text-secondary-900 font-semibold">{item.selectedColor}</span>
+                                            Size: <span className="text-secondary-900 font-semibold">{item.selectedSize}</span> 
+                                            {/* Color: <span className="text-secondary-900 font-semibold">{item.selectedColor}</span> */}
                                         </p>
                                     </div>
 
@@ -88,19 +89,19 @@ const Cart = () => {
                                         <div className="flex items-center border border-secondary-200 rounded-lg overflow-hidden h-10">
                                             <button
                                                 onClick={() => updateQuantity(item.id, item.selectedSize, item.selectedColor, item.quantity - 1)}
-                                                className="px-3 hover:bg-secondary-50 transition-colors"
+                                                className="px-2 hover:bg-secondary-50 transition-colors"
                                             >
                                                 <Minus size={14} />
                                             </button>
                                             <span className="w-8 text-center font-bold text-sm tracking-tighter">{item.quantity}</span>
                                             <button
                                                 onClick={() => updateQuantity(item.id, item.selectedSize, item.selectedColor, item.quantity + 1)}
-                                                className="px-3 hover:bg-secondary-50 transition-colors"
+                                                className="px-2 hover:bg-secondary-50 transition-colors"
                                             >
                                                 <Plus size={14} />
                                             </button>
                                         </div>
-                                        <span className="text-xl font-black text-secondary-900">${(item.price * item.quantity).toFixed(2)}</span>
+                                        <span className="text-lg font-black text-secondary-900">${(item.price * item.quantity).toFixed(2)}</span>
                                     </div>
                                 </div>
                             </motion.div>
@@ -119,7 +120,7 @@ const Cart = () => {
 
                 {/* Order Summary */}
                 <aside>
-                    <div className="bg-secondary-50 rounded-3xl p-8 sticky top-32 border border-secondary-100">
+                    <div className="bg-secondary-50 rounded-xl p-8 sticky top-32 border border-secondary-200 shadow-accent-800">
                         <h2 className="text-2xl font-serif font-bold mb-6">Order Summary</h2>
 
                         <form onSubmit={handleApplyCoupon} className="mb-8">
@@ -155,7 +156,7 @@ const Cart = () => {
                                     <span>-${discount.toFixed(2)}</span>
                                 </div>
                             )}
-                            <div className="pt-6 border-t border-secondary-200 flex justify-between text-2xl font-serif font-bold text-black">
+                            <div className="pt-5 border-t border-secondary-200 flex uppercase justify-between text-xl font-sans font-bold text-black">
                                 <span>Total</span>
                                 <span className="text-[#e5a852]">${total.toFixed(2)}</span>
                             </div>
@@ -163,7 +164,7 @@ const Cart = () => {
 
                         <button
                             onClick={() => navigate('/checkout')}
-                            className="w-full bg-black text-[#e5a852] h-16 rounded-full flex items-center justify-center gap-3 text-[12px] font-black uppercase tracking-widest shadow-xl hover:bg-[#e5a852] hover:text-black transition-all"
+                            className="w-65 bg-black text-[#e5a852] ms-7 h-12 rounded-md flex items-center justify-center gap-3 text-[12px] font-black uppercase tracking-widest shadow-xl hover:bg-[#e5a852] hover:text-black transition-all"
                         >
                             Checkout Now <ArrowRight size={20} />
                         </button>

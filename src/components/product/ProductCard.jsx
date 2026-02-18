@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
             viewport={{ once: true }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="group relative bg-white rounded-lg overflow-hidden transition-all duration-700 hover:shadow-[0_60px_100px_-20px_rgba(0,0,0,0.1)] border border-transparent hover:border-secondary-50"
+            className="group relative bg-white rounded-lg overflow-hidden transition-all duration-200 hover:shadow-[0_60px_100px_-20px_rgba(0,0,0,0.1)] border border-transparent hover:border-secondary-50 h-140 w-75"
         >
             <Link to={`/product/${product.id}`} className="block">
                 <div className="relative aspect-4/5 overflow-hidden bg-secondary-50">
@@ -39,13 +39,13 @@ const ProductCard = ({ product }) => {
                             initial={{ opacity: 0.8, scale: 1 }}
                             animate={{ opacity: 1, scale: isHovered ? 1.05 : 1 }}
                             exit={{ opacity: 0.8 }}
-                            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-                            className="w-full h-full object-cover"
+                            transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
+                                className="w-full h-full object-cover transition-transform duration-200 ease-out transform-gpu will-change-transform group-hover:scale-105"
                         />
                     </AnimatePresence>
 
                     {/* Subtle Overlay */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
 
                     {/* Badges */}
                     <div className="absolute top-6 left-6 flex flex-col gap-2 z-20">
@@ -62,7 +62,7 @@ const ProductCard = ({ product }) => {
                     </div>
 
                     {/* Action Bar */}
-                    <div className="absolute bottom-8 left-0 right-0 px-6 flex items-center justify-center gap-3 translate-y-20 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] z-30">
+                    <div className="absolute bottom-8 left-0 right-0 px-6 flex items-center justify-center gap-3 translate-y-20 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] z-30">
                         <button
                             onClick={handleWishlist}
                             className={`p-4 rounded-2xl shadow-2xl backdrop-blur-xl transition-all duration-300 ${isInWishlist(product.id) ? 'bg-primary-500 text-white shadow-primary-500/20' : 'bg-white/95 text-secondary-900 hover:bg-secondary-900 hover:text-primary-500'}`}
@@ -71,7 +71,7 @@ const ProductCard = ({ product }) => {
                         </button>
                         <button
                             onClick={handleAddToCart}
-                            className="flex-1 h-14 bg-secondary-900 text-primary-500 rounded-2xl shadow-2xl backdrop-blur-xl hover:bg-black hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[10px] font-black uppercase tracking-[0.2em] flex items-center justify-center gap-3"
+                            className="flex-1 h-14 bg-secondary-900 text-primary-500 rounded-2xl shadow-2xl backdrop-blur-xl hover:bg-black hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[10px] font-black uppercase tracking-[0.2em] flex items-center justify-center gap-2"
                         >
                             <ShoppingBag size={18} />
                             Add to Bag
@@ -86,7 +86,7 @@ const ProductCard = ({ product }) => {
                         </span>
                     </div>
 
-                    <h3 className="text-lg md:text-xl font-serif font-bold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors duration-500 truncate">
+                    <h3 className="text-lg md:text-xl font-serif font-bold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors duration-200 truncate">
                         {product.name}
                     </h3>
 

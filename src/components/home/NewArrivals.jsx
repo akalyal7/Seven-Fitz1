@@ -20,7 +20,7 @@ const NewArrivals = () => {
             </video>
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/50" />
+            {/* <div className="absolute inset-0 bg-black/50" /> */}
 
             {/* Content */}
             <div className="relative h-full flex items-center justify-center">
@@ -46,7 +46,7 @@ const NewArrivals = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-2 bg-[#e5a852] text-black px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:bg-[#d49742] transition-all duration-300"
+                                className="inline-flex items-center gap-2 bg-[#e5a852] text-black px-6 py-3 hover:text-white hover:bg-black rounded-full font-semibold text-lg shadow-xl transition-all duration-300"
                             >
                                 Shop New Arrivals
                                 <ArrowRight size={20} />

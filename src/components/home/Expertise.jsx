@@ -46,7 +46,7 @@ const Expertise = () => {
                         </div>
 
                         <motion.div whileHover={{ scale: 1.05 }} className="mt-8 inline-block">
-                            <Link to="/about" className="bg-black text-[#e5a852] px-8 py-3 rounded-full font-bold shadow-lg shadow-black/10">
+                            <Link to="/about" className="bg-black text-[#e5a852] px-6 py-2 rounded-full font-bold shadow-lg shadow-black/10">
                                 Our Process
                             </Link>
                         </motion.div>

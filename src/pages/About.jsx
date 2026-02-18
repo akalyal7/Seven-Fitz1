@@ -8,7 +8,7 @@ const About = () => {
         <div className="bg-linear-to-b from-white via-slate-50/30 to-white text-secondary-900 pb-20 selection:bg-[#e5a852] selection:text-black relative">
 
             {/* Our Story - Neat Geometric */}
-            <section className="py-12 overflow-hidden">
+            <section className="py-20 overflow-hidden">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                         <div className="space-y-8">

@@ -28,7 +28,7 @@ const Login = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="bg-white p-10 md:p-14 rounded-[3rem] border border-secondary-100 shadow-2xl"
+                    className="bg-white p-10 md:p-14 rounded-lg border border-secondary-100 shadow-2xl"
                 >
                     <div className="text-center mb-12">
                         <h1 className="text-4xl font-serif font-bold mb-3">Welcome Back</h1>
@@ -77,7 +77,7 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full btn-gold h-16 text-lg uppercase tracking-widest">
+                        <button type="submit" className="w-full btn-gold h-13 gap-3 text-lg uppercase tracking-widest">
                             Sign In
                         </button>
                     </form>
