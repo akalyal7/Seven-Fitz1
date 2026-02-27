@@ -3,41 +3,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus } from "react-icons/fa";
 import { useCart } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
-
-const products = [
-  {
-    id: 0,
-    top: "28%",
-    left: "35%",
-    image:
-      "https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_bdf009a7-1c4b-4908-b608-8a87077c6624_540x.jpg?v=1620292172",
-    title: "Leather Jacket",
-    price: "$80.00",
-  },
-  {
-    id: 1,
-    top: "50%",
-    left: "48%",
-    image:
-      "https://minion-vinovatheme.myshopify.com/cdn/shop/products/1_35b50c99-4282-4db9-a16a-41a635a6de47_540x.jpg?v=1620292274",
-    title: "Lace Skirt",
-    price: "$40.00",
-  },
-  {
-    id: 2,
-    top: "85%",
-    left: "55%",
-    image:
-      "https://minion-vinovatheme.myshopify.com/cdn/shop/products/2_d5608c30-f5f8-4b66-b5ca-41a3d92da2a8_540x.jpg?v=1620292226",
-    title: "Hand Bag",
-    price: "$55.00",
-  },
-];
+import { useProducts } from "../../context/ProductContext";
 
 const ProductShowcase = () => {
   const [active, setActive] = useState(0);
   const { addToCart } = useCart();
   const navigate = useNavigate();
+  const { products, loading } = useProducts();
+
+  if (loading) return <p className="w-full text-center py-20">Loading...</p>;
+
+  const displayProducts = [
+    { ...products?.[0], top: "28%", left: "35%", image: products?.[0]?.images?.[0] || "", title: products?.[0]?.name, price: `$${products?.[0]?.price}` },
+    { ...products?.[1], top: "50%", left: "48%", image: products?.[1]?.images?.[0] || "", title: products?.[1]?.name, price: `$${products?.[1]?.price}` },
+    { ...products?.[2], top: "85%", left: "55%", image: products?.[2]?.images?.[0] || "", title: products?.[2]?.name, price: `$${products?.[2]?.price}` },
+  ].filter(p => p && p.name);
 
   return (
     <section className="w-full min-h-screen bg-white flex items-center justify-center p-4 md:p-10">
@@ -51,9 +31,9 @@ const ProductShowcase = () => {
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          {products.map((item, index) => (
+          {displayProducts.map((item, index) => (
             <motion.div
-              key={item.id}
+              key={item.id || index}
               onClick={() => setActive(index)}
               className="absolute cursor-pointer"
               style={{ top: item.top, left: item.left }}
@@ -88,22 +68,22 @@ const ProductShowcase = () => {
               className="w-full flex flex-col items-center"
             >
               <img
-                src={products[active].image}
-                alt={products[active].title}
+                src={displayProducts[active]?.image}
+                alt={displayProducts[active]?.title}
                 className="w-50 md:w-70.5 object-contain mb-6 rounded-lg shadow-md"
               />
 
               <h3 className="text-gray-700 text-sm mb-2 font-semibold">
-                {products[active].title}
+                {displayProducts[active]?.title}
               </h3>
 
               <p className="text-black font-bold mb-6 text-lg">
-                {products[active].price}
+                {displayProducts[active]?.price}
               </p>
 
               <button
                 onClick={() => {
-                  const prod = products[active];
+                  const prod = displayProducts[active];
                   const productForCart = {
                     id: prod.id,
                     name: prod.title,
@@ -122,13 +102,12 @@ const ProductShowcase = () => {
 
           {/* Dots */}
           <div className="flex gap-2 mt-6 absolute bottom-6">
-            {products.map((_, i) => (
+            {displayProducts.map((_, i) => (
               <span
                 key={i}
                 onClick={() => setActive(i)}
-                className={`w-3 h-3 rounded-full cursor-pointer border border-[#e5a852] ${
-                  active === i ? "bg-[#e5a852]" : "bg-white"
-                }`}
+                className={`w-3 h-3 rounded-full cursor-pointer border border-[#e5a852] ${active === i ? "bg-[#e5a852]" : "bg-white"
+                  }`}
               ></span>
             ))}
           </div>

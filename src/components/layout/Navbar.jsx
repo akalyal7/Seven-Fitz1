@@ -1,282 +1,171 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { ShoppingBag, Heart, User, Search, Menu, X, LogOut } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
-import { useWishlist } from '../../context/WishlistContext';
-import { useAuth } from '../../context/AuthContext';
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
-import logo from '../../assets/images/logo1.png';
+import React, { useEffect, useState, useContext } from "react";
+import { motion } from "framer-motion";
+import { Search, User, Heart, ShoppingBag } from "lucide-react";
+import logo from "../../assets/images/logo1.png";
+import { Link, useNavigate } from "react-router-dom";
+import { useWishlist } from "../../context/WishlistContext";
+import { useCart } from "../../context/CartContext";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [scrolled, setScrolled] = useState(false);
-  const [hoveredPath, setHoveredPath] = useState(null);
-
-  const { cartCount } = useCart();
   const { wishlistItems } = useWishlist();
-  const { user, logout, isAuthenticated } = useAuth();
+  const { cartCount } = useCart();
+  const [scrolled, setScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setOpen(false);
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Auto-show search on small screens and keep it in sync on resize
-  useEffect(() => {
-    const handleResize = () => {
-      setShowSearch(window.innerWidth < 768);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/shop?search=${searchQuery}`);
-      setSearchQuery('');
-      // Close search only on desktop — keep visible on mobile
-      if (window.innerWidth >= 768) setShowSearch(false);
+      setSearchQuery("");
+      setIsSearchOpen(false);
     }
   };
 
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Shop', path: '/shop' },
-    { name: 'About', path: '/about' },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header
-      className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/90 backdrop-blur-md border-b border-yellow-600/30 shadow-sm'
-          : 'bg-black border-b border-yellow-600/10'
-      }`}
-    >
-      
+    <div className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled ? "bg-black/80 backdrop-blur-md border-b border-gray-800" : "bg-black"} px-4 md:px-20`}>
 
-      {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-2 flex items-center justify-between py-3">
-
-        {/* Logo */}
-        <Link to="/" className="relative group">
-          <motion.img
-            src={logo}
-            alt="Logo"
-            className="h-8 sm:h-9 md:h-10 lg:h-12 w-auto"
-            whileHover={{ scale: 1.05 }}
-          />
+      <motion.div
+        className="flex items-center justify-between"
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Logo - Always visible */}
+        <Link to="/">
+          <img src={logo} alt="Logo" className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-12 md:h-14 py-2' : 'h-14 md:h-20 py-4'}`} />
         </Link>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-10 font-medium relative">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className="relative py-1 text-[#e5a852] hover:text-white transition"
-              onMouseEnter={() => setHoveredPath(link.path)}
-              onMouseLeave={() => setHoveredPath(null)}
-            >
-              {link.name}
-              {(hoveredPath === link.path || location.pathname === link.path) && (
-                <motion.div
-                  layoutId="navbar-indicator"
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-linear-to-r from-yellow-300 via-[#e5a852] to-yellow-700"
-                />
-              )}
-            </Link>
-          ))}
-        </nav>
+        {/* Center Section - Always visible navigation */}
+        <ul className="hidden md:flex space-x-8 md:space-x-10 font-bold tracking-wider text-[#ffbf67] text-sm">
+          <Link to="/" className="relative group cursor-pointer hover:text-white transition-colors">
+            HOME
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffbf67] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/shop" className="relative group cursor-pointer hover:text-white transition-colors">
+            SHOP
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffbf67] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/about" className="relative group cursor-pointer hover:text-white transition-colors">
+            ABOUT
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ffbf67] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+        </ul>
 
-        {/* Desktop Search */}
-        <form
-          onSubmit={handleSearch}
-          className="hidden md:flex items-center border border-yellow-200/50 rounded-full overflow-hidden bg-black/40 backdrop-blur-sm pr-1 py-1 pl-5"
-        >
-          <input
-            type="text"
-            placeholder="Search dresses..."
-            className="outline-none text-sm w-44 lg:w-56 bg-transparent text-white placeholder-gray-500"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button className="bg-linear-to-r from-[#e5a852] to-yellow-700 p-2 rounded-full text-black">
-            <Search size={16} />
-          </button>
-        </form>
+        {/* Right Section */}
+        <div className="flex items-center space-x-3 md:space-x-5 text-[#ffbf67]">
+          {/* Search Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsSearchOpen(!isSearchOpen)}
+            className="cursor-pointer hover:text-white transition-colors"
+          >
+            <Search className="w-4 h-4 md:w-6 md:h-6" />
+          </motion.button>
 
-        {/* Icons */}
-        <div className="flex items-center gap-5 sm:gap-6">
-
-          {/* Mobile Search icon hidden: mobile search is shown automatically */}
-
-          {/* User */}
+          {/* Profile Icon with Dropdown */}
           <div className="relative">
             <User
-              className="cursor-pointer text-[#e5a852]"
-              onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
+              className="cursor-pointer hover:text-white transition-colors w-4 h-4 md:w-6 md:h-6"
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
             />
-
-            <AnimatePresence>
-              {isUserMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute right-0 mt-4 w-56 bg-black border border-yellow-600/30 rounded-xl shadow-2xl py-3 text-[#e5a852]"
-                >
-                  {isAuthenticated ? (
-                    <>
-                      <div className="px-5 py-3 border-b border-yellow-600/20">
-                        <p className="text-sm font-bold text-white">{user.name}</p>
-                        <p className="text-xs text-yellow-500/80 truncate">{user.email}</p>
-                      </div>
-                      <Link to="/profile" className="block px-5 py-2 text-xs hover:bg-yellow-500/10">Profile</Link>
-                      <Link to="/orders" className="block px-5 py-2 text-xs hover:bg-yellow-500/10">Orders</Link>
-                      <button
-                        onClick={() => { logout(); setIsUserMenuOpen(false); }}
-                        className="w-full text-left px-5 py-2 text-xs text-red-400 hover:bg-red-500/10 flex items-center"
-                      >
-                        <LogOut size={14} className="mr-2" /> Logout
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <Link to="/login" className="block px-5 py-2 text-xs hover:bg-yellow-500/10">Login</Link>
-                      <Link to="/register" className="block px-5 py-2 text-xs hover:bg-yellow-500/10">Register</Link>
-                    </>
-                  )}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {isProfileOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="absolute right-0 top-10 bg-white text-black p-4 rounded-lg shadow-xl w-48 z-50 border border-gray-100"
+              >
+                <div className="flex flex-col space-y-3">
+                  <Link to="/login" className="px-4 py-2 hover:bg-gray-100 rounded text-sm font-semibold" onClick={() => setIsProfileOpen(false)}>Login</Link>
+                  <Link to="/register" className="px-4 py-2 hover:bg-gray-100 rounded text-sm font-semibold" onClick={() => setIsProfileOpen(false)}>Register</Link>
+                </div>
+              </motion.div>
+            )}
           </div>
 
-          {/* Wishlist */}
-          <Link to="/wishlist" className="relative text-[#e5a852]">
-            <Heart />
+          <Link to="/wishlist" className="relative cursor-pointer hover:text-white transition-colors">
+            <Heart className="w-4 h-4 md:w-6 md:h-6" />
             {wishlistItems.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-linear-to-r from-[#e5a852] to-yellow-700 text-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] md:text-xs rounded-full px-1.5 md:px-1.5 py-0.5">
                 {wishlistItems.length}
               </span>
             )}
           </Link>
-
-          {/* Cart */}
-          <Link to="/cart" className="relative text-[#e5a852]">
-            <ShoppingBag />
+          <Link to="/cart" className="relative cursor-pointer hover:text-white transition-colors">
+            <ShoppingBag className="w-4 h-4 md:w-6 md:h-6" />
             {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-linear-to-r from-[#e5a852] to-yellow-700 text-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+              <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] md:text-xs rounded-full px-1.5 md:px-1.5 py-0.5">
                 {cartCount}
               </span>
             )}
           </Link>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-[#e5a852]"
-            onClick={() => setOpen(true)}
-          >
-            <Menu size={28} />
-          </button>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Scroll Progress */}
-      <motion.div
-        className="h-0.5 bg-linear-to-r from-yellow-300 via-[#e5a852] to-yellow-700 origin-left"
-        style={{ scaleX }}
-      />
-
-      {/* Mobile Search */}
-      <AnimatePresence>
-        {showSearch && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="md:hidden px-4 pb-4 bg-black border-t border-yellow-600/20"
-          >
-            <form onSubmit={handleSearch} className="mt-2 flex border border-yellow-500/30 rounded-full overflow-hidden">
-              <input
-                type="text"
-                placeholder="Search dresses..."
-                className="flex-1 bg-transparent text-white px-4 py-2 outline-none"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button className="bg-linear-to-r from-[#e5a852] to-yellow-600 px-4">
-                <Search size={16} />
-              </button>
-            </form>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Mobile Sidebar */}
-      <AnimatePresence>
-        {open && (
-          <>
-            {/* Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 md:hidden"
-              onClick={() => setOpen(false)}
+      {/* Search bar - Toggle on click */}
+      {isSearchOpen && (
+        <motion.div
+          className="px-4 md:px-6 pb-6 pt-2 w-full"
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <form className="flex items-center relative w-full lg:max-w-3xl mx-auto" onSubmit={handleSearch}>
+            <Search className="absolute left-4 text-[#ffbf67] w-5 h-5 z-10" />
+            <input
+              type="text"
+              placeholder="Discover our premium collection..."
+              className="w-full bg-black/60 md:bg-white/10 backdrop-blur-md text-white md:text-white placeholder-gray-300 md:placeholder-gray-400 border border-gray-600 md:border-gray-700/50 rounded-full py-3.5 md:py-4 pl-12 md:pl-14 pr-4 md:pr-6 focus:outline-none focus:border-[#ffbf67] focus:ring-1 focus:ring-[#ffbf67] transition-all shadow-lg text-sm md:text-base tracking-wide"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              autoFocus
             />
+          </form>
+        </motion.div>
+      )}
 
-            {/* Sidebar */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', stiffness: 260, damping: 25 }}
-              className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-black border-l border-yellow-600/20 shadow-2xl z-50 md:hidden flex flex-col"
-            >
-              <div className="flex justify-end p-5 border-b border-yellow-600/10">
-                <button onClick={() => setOpen(false)} className="text-[#e5a852]">
-                  <X size={28} />
-                </button>
-              </div>
-
-              <nav className="flex flex-col items-center justify-center flex-1 gap-10 text-xl tracking-[0.25em] font-serif">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className="text-[#e5a852] hover:text-white transition"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.name.toUpperCase()}
-                  </Link>
-                ))}
-              </nav>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-    </header>
+      {/* Mobile Navigation Menu (for small screens) */}
+      <div className="md:hidden flex justify-between items-center py-3 border-t border-gray-800 bg-black/95 backdrop-blur-md pb-safe">
+        <ul className="flex w-full justify-around font-bold tracking-widest text-[#ffbf67] text-[10px] uppercase">
+          <Link to="/" className="relative group cursor-pointer hover:text-white transition-colors pb-1">
+            HOME
+            <span className="absolute bottom-0 left-0 w-current h-0.5 bg-[#ffbf67] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          </Link>
+          <Link to="/shop" className="relative group cursor-pointer hover:text-white transition-colors pb-1">
+            SHOP
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#ffbf67] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          </Link>
+          <Link to="/about" className="relative group cursor-pointer hover:text-white transition-colors pb-1">
+            ABOUT
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#ffbf67] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+          </Link>
+        </ul>
+      </div>
+    </div>
   );
 };
 
 export default Navbar;
+
+
+
+
+

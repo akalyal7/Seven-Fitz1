@@ -1,161 +1,493 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Classic Silk Wrap Dress",
-            "price": 129.99,
-            "category": "Dresses",
-            "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
-            "images": [
-                "https://images.unsplash.com/photo-1669199528846-a1bc69d1b2ce?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "XS",
-                "S",
-                "M",
-                "L",
-                "XL"
-            ]
-        },
-        {
-            "id": 2,
-            "name": "Linen Tailored Blazer",
-            "price": 89.50,
-            "category": "Outerwear",
-            "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
-            "images": [
-                "https://images.unsplash.com/photo-1693987647760-03d7babf5dac?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "S",
-                "M",
-                "L",
-                "XL"
-            ]
-        },
-        {
-            "id": 3,
-            "name": "High-Waist Cotton Cargo Pants",
-            "price": 64.00,
-            "category": "Bottoms",
-            "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
-            "images": [
-                "https://images.unsplash.com/photo-1669199208580-fa87b86baec5?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "XS",
-                "S",
-                "M",
-                "L"
-            ]
-        },
-        {
-            "id": 4,
-            "name": "Cashmere Turtleneck Sweater",
-            "price": 145.00,
-            "category": "Knitwear",
-            "description": "Ultra-soft cashmere sweater featuring a cozy turtleneck and ribbed cuffs. A luxury essential for cold days.",
-            "images": [
-                "https://images.unsplash.com/photo-1693987644111-491262bffa47?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1583912267550-d44d7a125e7e?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "S",
-                "M",
-                "L"
-            ]
-        },
-        {
-            "id": 5,
-            "name": "Satin Evening Gown",
-            "price": 210.00,
-            "category": "Dresses",
-            "description": "Elegant satin evening gown with a cowl neck and side slit. Perfect for formal events.",
-            "images": [
-                "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1539008835657-9e8e9680fe0a?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "XS",
-                "S",
-                "M",
-                "L"
-            ]
-        },
-        {
-            "id": 6,
-            "name": "Oversized Wool Coat",
-            "price": 185.00,
-            "category": "Outerwear",
-            "description": "Cozy oversized wool coat with large lapels and deep pockets. Ideal for winter layering.",
-            "images": [
-                "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1544022613-e87ce75c75c4?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "S",
-                "M",
-                "L",
-                "XL"
-            ]
-        },
-        {
-            "id": 7,
-            "name": "Pleated Midi Skirt",
-            "price": 55.00,
-            "category": "Bottoms",
-            "description": "Flowy pleated midi skirt with an elastic waistband. Versatile for both work and weekend.",
-            "images": [
-                "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1509556756506-191500916359?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "XS",
-                "S",
-                "M",
-                "L"
-            ]
-        },
-        {
-            "id": 8,
-            "name": "Ribbed Knit Cardigan",
-            "price": 78.00,
-            "category": "Knitwear",
-            "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
-            "images": [
-                "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&auto=format&fit=crop&q=60",
-                "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
-            ],
-            "sizes": [
-                "S",
-                "M",
-                "L"
-            ]
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Sarees",
-            "img1": "https://images.unsplash.com/photo-1475180098004-ca77a652e9cd?w=600&auto=format&fit=crop&q=60"
-        },
-        {
-            "id": 2,
-            "name": "Half Sarees",
-            "img2": "https://images.unsplash.com/photo-1544022613-e87ce75c75c4?w=400&q=80"
-        },
-        {
-            "id": 3,
-            "name": "Office wear",
-            "img3": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&q=80"
-        },
-        {
-            "id": 4,
-            "name": "Kurti",
-            "img4": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&q=80"
-        }
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic Silk Wrap Dress",
+      "price": 129.99,
+      "category": "Saree",
+      "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+      "images": [
+        "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M", 
+        "L",
+        "XL"
+      ],
+      "rating": 4.8,
+      "reviews": 124,
+      "isNew": true,
+      "isFeatured": true,
+      "subcategory": "Silk",
+      "variants": [
+  {
+    "color": "Red",
+    "colorCode": "#DC2626",
+    "images": [
+      "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
     ]
+  },
+  {
+    "color": "Navy",
+    "colorCode": "#1E3A8A",
+    "images": [
+      "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+    ]
+  }
+]
+    },
+    {
+      "id": 2,
+      "name": "Linen Tailored Blazer",
+      "price": 89.5,
+      "category": "Half-Saree",
+      "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+      "images": [
+        "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+        "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "rating": 4.5,
+      "reviews": 82,
+      "isNew": false,
+      "isFeatured": true,
+      "subcategory": "Traditional",
+      "variants": [
+  {
+    "color": "Red",
+    "colorCode": "#DC2626",
+    "images": [
+      "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+    ]
+  },
+  {
+    "color": "Navy",
+    "colorCode": "#1E3A8A",
+    "images": [
+      "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+    ]
+  }
+]
+
+    },
+    {
+      "id": 3,
+      "name": "High-Waist Cotton Cargo Pants",
+      "price": 64,
+      "category": "Office Wear",
+      "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
+      "images": [
+        "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1669194721830-b5b9f794f08d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.2,
+      "reviews": 56,
+      "isNew": true,
+      "isFeatured": false,
+      "subcategory": "Trousers",
+       "variants": [
+  {
+    "color": "Red",
+    "colorCode": "#DC2626",
+    "images": [
+      "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+    ]
+  },
+  {
+    "color": "Navy",
+    "colorCode": "#1E3A8A",
+    "images": [
+      "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+      "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+    ]
+  }
+]
+
+    },
+    {
+      "id": 4,
+      "name": "Cashmere Turtleneck Sweater",
+      "price": 145,
+      "category": "Kurti",
+      "description": "Ultra-soft cashmere sweater featuring a cozy turtleneck and ribbed cuffs. A luxury essential for cold days.",
+      "images": [
+        "https://images.unsplash.com/photo-1669199207455-dcb9ebb242f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDc5fHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1669199205117-85651692fba3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDc4fHx8ZW58MHx8fHx8"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.9,
+      "reviews": 210,
+      "isNew": false,
+      "isFeatured": true,
+      "subcategory": "Anarkali"
+    },
+    {
+      "id": 5,
+      "name": "Satin Evening Gown",
+      "price": 210,
+      "category": "Saree",
+      "description": "Elegant satin evening gown with a cowl neck and side slit. Perfect for formal events.",
+      "images": [
+        "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+        "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 5,
+      "reviews": 45,
+      "isNew": true,
+      "isFeatured": true,
+      "subcategory": "Party"
+    },
+    {
+      "id": 6,
+      "name": "Oversized Wool Coat",
+      "price": 185,
+      "category": "Half-Saree",
+      "description": "Cozy oversized wool coat with large lapels and deep pockets. Ideal for winter layering.",
+      "images": [
+        "https://images.unsplash.com/photo-1693987642090-f56a23bff32b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1693987646568-22fd78a35d26?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "rating": 4.7,
+      "reviews": 89,
+      "isNew": false,
+      "isFeatured": false,
+      "subcategory": "Contemporary"
+    },
+    {
+      "id": 7,
+      "name": "Pleated Midi Skirt",
+      "price": 55,
+      "category": "Office Wear",
+      "description": "Flowy pleated midi skirt with an elastic waistband. Versatile for both work and weekend.",
+      "images": [
+        "https://images.unsplash.com/photo-1693988100120-b75e4cba7af3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+        "https://images.unsplash.com/photo-1693988100123-6e08d48ca4f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.4,
+      "reviews": 67,
+      "isNew": true,
+      "isFeatured": false,
+      "subcategory": "Skirts"
+    },
+    {
+      "id": 8,
+      "name": "Ribbed Knit Cardigan",
+      "price": 78,
+      "category": "Kurti",
+      "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+      "images": [
+        "https://images.unsplash.com/photo-1669199583373-b9636f3f14c8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI1fHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1669199583204-c46f19d46f66?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.6,
+      "reviews": 112,
+      "isNew": false,
+      "isFeatured": false,
+      "subcategory": "Straight"
+    },
+    {
+      "id": 9,
+      "name": "Ribbed Knit Cardigan",
+      "price": 78,
+      "category": "Kurti",
+      "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+      "images": [
+        "https://images.unsplash.com/photo-1669199816632-2aeb9aa81d4c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+        "https://images.unsplash.com/photo-1669201160936-a9ec73d9b4ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.6,
+      "reviews": 112,
+      "isNew": false,
+      "isFeatured": false,
+      "subcategory": "Straight"
+    },
+    {
+      "id": 10,
+      "name": "Ribbed Knit Cardigan",
+      "price": 78,
+      "category": "Kurti",
+      "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+      "images": [
+        "https://images.unsplash.com/photo-1693988100109-c1b19e917cb4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+        "https://images.unsplash.com/photo-1693988100058-cf25a1b16001?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.6,
+      "reviews": 112,
+      "isNew": false,
+      "isFeatured": false,
+      "subcategory": "Straight"
+    },
+    {
+      "id": 11,
+      "name": "Pleated Midi Skirt",
+      "price": 55,
+      "category": "Office Wear",
+      "description": "Flowy pleated midi skirt with an elastic waistband. Versatile for both work and weekend.",
+      "images": [
+        "https://images.unsplash.com/photo-1693987071149-2054859f159a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1693987026907-c00c974ddcda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI2fHx8ZW58MHx8fHx8"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.4,
+      "reviews": 67,
+      "isNew": true,
+      "isFeatured": false,
+      "subcategory": "Skirts"
+    },
+    {
+      "id": 12,
+      "name": "Ribbed Knit Cardigan",
+      "price": 78,
+      "category": "Kurti",
+      "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+      "images": [
+        "https://images.unsplash.com/photo-1693990149357-17819afee45b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI2fHx8ZW58MHx8fHx8",
+        "https://images.unsplash.com/photo-1693990150852-0f085f0ba97e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "rating": 4.6,
+      "reviews": 112,
+      "isNew": false,
+      "isFeatured": false,
+      "subcategory": "Straight"
+    }
+  ],
+  "categoriesforhome": [
+    {
+      "id": 1,
+      "name": "Saree",
+      "image": "https://images.unsplash.com/photo-1693987026907-c00c974ddcda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI2fHx8ZW58MHx8fHx8",
+      "image1": "https://images.unsplash.com/photo-1693987071149-2054859f159a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8",
+      "subcategories": [
+        "Silk",
+        "Cotton",
+        "Party"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Office Wear",
+      "image": "https://plus.unsplash.com/premium_photo-1675034813459-e2232141da11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://plus.unsplash.com/premium_photo-1675034816871-607982bbcd71?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Blazers",
+        "Shirts",
+        "Trousers"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kurti",
+      "image": "https://images.unsplash.com/photo-1693988498506-701a7a8e4c64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1693988498384-1203fe82ff10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Anarkali",
+        "Straight",
+        "Long"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Half-Saree",
+      "image": "https://images.unsplash.com/photo-1693990153068-fec3f622d55b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1693990150323-3fc093609d79?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Traditional",
+        "Contemporary",
+        "Bridal"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lehenga",
+      "image": "https://images.unsplash.com/photo-1693987647384-7f4bd601f2af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1693987643021-26f416b0f47f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Bridal",
+        "Festive",
+        "Designer"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Salwar Suit",
+      "image": "https://images.unsplash.com/photo-1631269535947-7265b31b8442?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1631269535906-35701ba80735?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Casual",
+        "Party",
+        "Traditional"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "name": "Red",
+      "value": "#DC2626"
+    },
+    {
+      "name": "Navy",
+      "value": "#1E3A8A"
+    },
+    {
+      "name": "Beige",
+      "value": "#F5F5DC"
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Saree",
+      "image": "https://images.unsplash.com/photo-1693987026907-c00c974ddcda?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI2fHx8ZW58MHx8fHx8",
+      "image1": "https://images.unsplash.com/photo-1693987071149-2054859f159a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8",
+      "subcategories": [
+        "Silk",
+        "Cotton",
+        "Party"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Office Wear",
+      "image": "https://plus.unsplash.com/premium_photo-1675034813459-e2232141da11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://plus.unsplash.com/premium_photo-1675034816871-607982bbcd71?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Blazers",
+        "Shirts",
+        "Trousers"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kurti",
+      "image": "https://images.unsplash.com/photo-1693988498506-701a7a8e4c64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1693988498384-1203fe82ff10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Anarkali",
+        "Straight",
+        "Long"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Half-Saree",
+      "image": "https://images.unsplash.com/photo-1693990153068-fec3f622d55b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1693990150323-3fc093609d79?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Traditional",
+        "Contemporary",
+        "Bridal"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Lehenga",
+      "image": "https://images.unsplash.com/photo-1693987647384-7f4bd601f2af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1693987643021-26f416b0f47f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Bridal",
+        "Festive",
+        "Designer"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Salwar Suit",
+      "image": "https://images.unsplash.com/photo-1631269535947-7265b31b8442?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "image1": "https://images.unsplash.com/photo-1631269535906-35701ba80735?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      "subcategories": [
+        "Casual",
+        "Party",
+        "Traditional"
+      ]
+    }
+  ],
+
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Priya",
+      "rating": 5,
+      "comment": "Amazing product!"
+    },
+    {
+      "id": 2,
+      "name": "Anjali",
+      "rating": 4,
+      "comment": "Good quality fabric"
+    }
+  ]
 }

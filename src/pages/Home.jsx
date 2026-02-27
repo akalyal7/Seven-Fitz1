@@ -9,6 +9,8 @@ import NewArrivals from '../components/home/NewArrivals';
 import SocialGallery from '../components/home/SocialGallery';
 import ProductShowcase from '../components/home/ProductShowcase';
 import Testimonials from '../components/home/Testimonials';
+import CollectionSection from '../components/home/CollectionSection';
+import NewArrivalssection2 from '../components/home/NewArrivalssection2';
 
 const Home = () => {
   return (
@@ -19,8 +21,10 @@ const Home = () => {
       {/* <Expertise /> */}
       <FeaturedProducts />
       <Categories />
-      <NewArrivals />
-      <ProductShowcase />
+      {/* <CollectionSection /> */}
+      {/* <NewArrivals /> */}
+      <NewArrivalssection2 />
+      {/* <ProductShowcase /> */}
       
       {/* <SocialGallery /> */}
       <Testimonials />

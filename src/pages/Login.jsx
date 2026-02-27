@@ -77,7 +77,7 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full btn-gold h-13 gap-3 text-lg uppercase tracking-widest">
+                        <button type="submit" className="w-full btn-gold h-13 gap-3 text-md uppercase tracking-widest">
                             Sign In
                         </button>
                     </form>

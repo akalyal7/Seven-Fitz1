@@ -132,7 +132,7 @@ const Register = () => {
                             </p>
                         </div>
 
-                        <button type="submit" className="w-full btn-gold h-13 text-lg uppercase tracking-widest">
+                        <button type="submit" className="w-full btn-gold h-13 text-md uppercase tracking-widest">
                             Create Account
                         </button>
                     </form>

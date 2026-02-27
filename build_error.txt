@@ -1,0 +1,66 @@
+﻿
+> example7fitz@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 50 modules transformed.
+node.exe : 
+[31mΓ£ù[39m Build 
+failed in 2.92s
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Users\Akash\AppData
+\Roaming\ ...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([31mΓ£ù[39m   
+  Build failed in 2    
+.92s:String) [], R    
+emoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+[31merror during 
+build:
+[31mCould not resolve 
+"../components/home/Col
+lectionSection" from "s
+rc/pages/Home.jsx"[31m
+file: [36mD:/L-7 
+Softech works/7-Fitz we
+bsite/Example7fitz/src/
+pages/Home.jsx[31m
+    at getRollupError (
+file:///D:/L-7%20Softec
+h%20works/7-Fitz%20webs
+ite/Example7fitz/node_m
+odules/rollup/dist/es/s
+hared/parseAst.js:402:4
+1)
+    at error (file:///D
+:/L-7%20Softech%20works
+/7-Fitz%20website/Examp
+le7fitz/node_modules/ro
+llup/dist/es/shared/par
+seAst.js:398:42)
+    at ModuleLoader.han
+dleInvalidResolvedId (f
+ile:///D:/L-7%20Softech
+%20works/7-Fitz%20websi
+te/Example7fitz/node_mo
+dules/rollup/dist/es/sh
+ared/node-entry.js:2168
+7:24)
+    at file:///D:/L-7%2
+0Softech%20works/7-Fitz
+%20website/Example7fitz
+/node_modules/rollup/di
+st/es/shared/node-entry
+.js:21647:26[39m

@@ -1,289 +1,213 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { products } from '../data/products';
-import ProductCard from '../components/product/ProductCard';
-import ProductSkeleton from '../components/product/ProductSkeleton';
-import WomensFilters from '../components/shop/WomensFilters';
-import { Search, ChevronDown, X, SlidersHorizontal, ArrowLeft, ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Search, ArrowLeft, ArrowRight, ListFilter } from "lucide-react";
+
+import { useProducts } from "../context/ProductContext";
+import ProductCard from "../components/product/ProductCard";
+import ProductSkeleton from "../components/product/ProductSkeleton";
 
 const Shop = () => {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const [isFilterOpen, setIsFilterOpen] = useState(false);
-    const [sortBy, setSortBy] = useState('featured');
-    const [isLoading, setIsLoading] = useState(true);
-    const [currentPage, setCurrentPage] = useState(1);
-    const productsPerPage = 6;
+  const { products, loading } = useProducts();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [isLoading, setIsLoading] = useState(true);
+  const isPageLoading = loading || isLoading;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
 
-    // Filter states 
-    const [priceRange, setPriceRange] = useState(500);
-    const [selectedCategories, setSelectedCategories] = useState([]);
-    const [selectedSizes, setSelectedSizes] = useState([]);
-    const [selectedColors, setSelectedColors] = useState([]);
+  const productsPerPage = 6;
+  const urlSearch = searchParams.get("search");
 
-    const urlCategory = searchParams.get('category');
-    const urlSearch = searchParams.get('search');
+  const categories = [
+    "ALL",
+    "SAREE",
+    "HALF-SAREE",
+    "KURTI",
+    "LEHENGA",
+    "SALWAR SUIT",
+    "OFFICE WEAR",
+  ];
 
-    useEffect(() => {
-        setIsLoading(true);
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1200);
-        return () => clearTimeout(timer);
-    }, [selectedCategories, selectedSizes, selectedColors, priceRange, sortBy]);
+  /* Loading Effect */
+  useEffect(() => {
+    setIsLoading(true);
+    setCurrentPage(1);
+    const timer = setTimeout(() => setIsLoading(false), 700);
+    return () => clearTimeout(timer);
+  }, [selectedCategory, urlSearch]);
 
-    useEffect(() => {
-        if (urlCategory && !selectedCategories.includes(urlCategory)) {
-            setSelectedCategories([urlCategory]);
-        }
-    }, [urlCategory]);
+  /* Scroll to top on page change */
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentPage]);
 
-    const allCategories = [...new Set(products.map(p => p.category))];
-    const allSizes = ["XS", "S", "M", "L", "XL"];
-    const allColors = ["Emerald", "Midnight Blue", "Rose Gold", "Beige", "Ivory", "Sage", "Olive", "Black", "Sand", "Heather Gray", "Oatmeal", "Burgundy"];
+  const filteredProducts = useMemo(() => {
+    return products.filter((product) => {
+      const searchLower = urlSearch?.toLowerCase() || "";
+      const matchesSearch = urlSearch
+        ? product.name.toLowerCase().includes(searchLower) ||
+          product.category?.toLowerCase().includes(searchLower)
+        : true;
 
-    const filteredProducts = useMemo(() => {
-        return products.filter(product => {
-            const matchesSearch = urlSearch
-                ? product.name.toLowerCase().includes(urlSearch.toLowerCase()) ||
-                  product.description.toLowerCase().includes(urlSearch.toLowerCase())
-                : true;
+      const matchesCategory =
+        selectedCategory === "ALL"
+          ? true
+          : product.category?.toUpperCase() === selectedCategory;
 
-            const matchesCategory = selectedCategories.length > 0
-                ? selectedCategories.includes(product.category)
-                : true;
+      return matchesSearch && matchesCategory;
+    });
+  }, [urlSearch, selectedCategory, products]);
 
-            const matchesSize = selectedSizes.length > 0
-                ? product.sizes.some(size => selectedSizes.includes(size))
-                : true;
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
-            const matchesColor = selectedColors.length > 0
-                ? product.colors?.some(color => selectedColors.includes(color))
-                : true;
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * productsPerPage,
+    currentPage * productsPerPage
+  );
 
-            const matchesPrice = product.price <= priceRange;
+  const clearFilters = () => {
+    setSelectedCategory("ALL");
+    setSearchParams({});
+    setCurrentPage(1);
+  };
 
-            return matchesSearch && matchesCategory && matchesSize && matchesColor && matchesPrice;
-        }).sort((a, b) => {
-            if (sortBy === 'price-low') return a.price - b.price;
-            if (sortBy === 'price-high') return b.price - a.price;
-            if (sortBy === 'newest') return b.id - a.id;
-            return 0; // featured
-        });
-    }, [urlSearch, selectedCategories, selectedSizes, selectedColors, priceRange, sortBy]);
+  return (
+    <div className="relative min-h-screen pt-10 md:pt-12 pb-20 md:pb-28 bg-slate-50/50 overflow-hidden">
+      {/* Soft Luxury Background Glow */}
+      <div className="absolute top-0 right-0 w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] bg-[#e5a852]/5 blur-[80px] md:blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
-    const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-    const paginatedProducts = filteredProducts.slice(
-        (currentPage - 1) * productsPerPage,
-        currentPage * productsPerPage
-    );
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        {/* ================= HEADER ================= */}
+        <header className="mb-10 md:mb-16">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] mb-4 md:mb-6 text-black"
+          >
+            Our <span className="text-[#e5a852]">Luxury</span> Collection
+          </motion.h1>
 
-    useEffect(() => {
-        const element = document.getElementById('shop-collection');
-        if (element && !isLoading) element.scrollIntoView({ behavior: 'smooth' });
-    }, [currentPage]);
+          <p className="text-secondary-600 text-sm md:text-base mb-8 md:mb-10 max-w-xl leading-relaxed">
+            Discover refined silhouettes and handcrafted details curated for
+            every special moment.
+          </p>
 
-    const clearFilters = () => {
-        setSelectedCategories([]);
-        setSelectedSizes([]);
-        setSelectedColors([]);
-        setPriceRange(500);
-        setSearchParams({});
-        setCurrentPage(1);
-    };
-
-    return (
-        <div className="bg-linear-to-b from-white via-yellow-50/30 to-white min-h-screen pb-24 mt-10 relative">
-
-            <div id="shop-collection" className="max-w-7xl mx-auto px-6">
-
-                {/* Header & Filters */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 pb-8 border-b border-gray-200">
-                    <div>
-                        <div className="flex items-center gap-3 mb-3 mt-5">
-                           
-                            <span className="text-[#e5a852] font-black uppercase tracking-[0.4em] text-[10px]">Collection</span>
-                        </div>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-2">
-                            {urlSearch ? `Search: "${urlSearch}"` : "The Women's Edit"}
-                        </h2>
-                        <p className="text-gray-500 text-sm font-medium tracking-wide">
-                            Curating {isLoading ? "..." : paginatedProducts.length} of {filteredProducts.length} masterpieces
-                        </p>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                        <div className="relative group">
-                            <select
-                                value={sortBy}
-                                onChange={(e) => setSortBy(e.target.value)}
-                                className="appearance-none bg-white border border-gray-200 px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest focus:outline-none focus:ring-2 focus:ring-[#e5a852]/30 pr-12 shadow-sm hover:border-[#e5a852] transition"
-                            >
-                                <option value="featured">Featured</option>
-                                <option value="newest">Newest Arrivals</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                            </select>
-                            <ChevronDown size={14} className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400" />
-                        </div>
-
-                        <button
-                            onClick={() => setIsFilterOpen(true)}
-                            className="lg:hidden flex items-center justify-center gap-2 px-6 py-3 bg-black text-[#e5a852] rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-[#e5a852] hover:text-black transition shadow-xl"
-                        >
-                            <SlidersHorizontal size={14} /> Refine
-                        </button>
-                    </div>
-                </div>
-
-                <div className="flex flex-col lg:flex-row gap-10">
-                    {/* Sidebar */}
-                    <aside className="hidden lg:block w-64 shrink-0">
-                        <div className="sticky top-24">
-                            <WomensFilters
-                                categories={allCategories}
-                                sizes={allSizes}
-                                colors={allColors}
-                                selectedCategories={selectedCategories}
-                                setSelectedCategories={setSelectedCategories}
-                                selectedSizes={selectedSizes}
-                                setSelectedSizes={setSelectedSizes}
-                                selectedColors={selectedColors}
-                                setSelectedColors={setSelectedColors}
-                                priceRange={priceRange}
-                                setPriceRange={setPriceRange}
-                                onClear={clearFilters}
-                            />
-                        </div>
-                    </aside>
-
-                    {/* Product Grid */}
-                    <div className="grow">
-                        {isLoading ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                                {[...Array(productsPerPage)].map((_, i) => (
-                                    <ProductSkeleton key={i} />
-                                ))}
-                            </div>
-                        ) : paginatedProducts.length > 0 ? (
-                            <>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                                    {paginatedProducts.map((product) => (
-                                        <ProductCard key={product.id} product={product} />
-                                    ))}
-                                </div>
-
-                                {/* Pagination */}
-                                {totalPages > 1 && (
-                                    <div className="mt-12 flex items-center justify-center gap-3">
-                                        <button
-                                            disabled={currentPage === 1}
-                                            onClick={() => setCurrentPage(prev => prev - 1)}
-                                            className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-yellow-50 hover:border-[#e5a852] transition"
-                                        >
-                                            <ArrowLeft size={18} />
-                                        </button>
-
-                                        <div className="flex items-center gap-2">
-                                            {[...Array(totalPages)].map((_, i) => (
-                                                <button
-                                                    key={i}
-                                                    onClick={() => setCurrentPage(i + 1)}
-                                                    className={`w-10 h-10 rounded-full text-xs font-black transition ${currentPage === i + 1 ? 'bg-black text-[#e5a852] shadow-lg' : 'hover:bg-yellow-50 text-gray-400'}`}
-                                                >
-                                                    {i + 1}
-                                                </button>
-                                            ))}
-                                        </div>
-
-                                        <button
-                                            disabled={currentPage === totalPages}
-                                            onClick={() => setCurrentPage(prev => prev + 1)}
-                                            className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-yellow-50 hover:border-[#e5a852] transition"
-                                        >
-                                            <ArrowRight size={18} />
-                                        </button>
-                                    </div>
-                                )}
-                            </>
-                        ) : (
-                            <div className="py-20 bg-yellow-50 rounded-3xl border-2 border-dashed border-gray-200 px-8 text-center">
-                                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
-                                    <Search size={36} className="text-gray-300" />
-                                </div>
-                                <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No products found</h3>
-                                <p className="text-gray-500 max-w-md mb-8 mx-auto font-medium text-sm">We couldn't find anything matching your filters. Try widening your search.</p>
-                                <button
-                                    onClick={clearFilters}
-                                    className="px-6 py-2 bg-black text-[#e5a852] text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-[#e5a852] hover:text-black transition shadow-xl"
-                                >
-                                    Clear all filters
-                                </button>
-                            </div>
-                        )}
-                    </div>
-                </div>
+          {/* -------- Filter Pills -------- */}
+          <div className="flex overflow-x-auto md:flex-wrap items-center gap-2 md:gap-3 pt-5 md:pt-7 pb-4 hide-scrollbar">
+            <div className="flex items-center gap-2 mr-2 md:mr-4 text-gray-500 shrink-0">
+              <ListFilter size={16} />
+              <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em]">
+                Filter
+              </span>
             </div>
 
-            {/* Mobile Filter Slide-over */}
-            <AnimatePresence>
-                {isFilterOpen && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setIsFilterOpen(false)}
-                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-100"
-                        />
-                        <motion.div
-                            initial={{ x: '100%' }}
-                            animate={{ x: 0 }}
-                            exit={{ x: '100%' }}
-                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                            className="fixed inset-y-0 right-0 w-full max-w-md bg-white z-101 shadow-2xl flex flex-col"
-                        >
-                            <div className="flex items-center justify-between p-8 border-b border-gray-200">
-                                <h3 className="text-2xl font-serif font-bold">Refine Results</h3>
-                                <button
-                                    onClick={() => setIsFilterOpen(false)}
-                                    className="p-3 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
-                                >
-                                    <X size={20} />
-                                </button>
-                            </div>
+            {categories.map((cat) => (
+              <motion.button
+                key={cat}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setCurrentPage(1);
+                  if (urlSearch) setSearchParams({});
+                }}
+                className={`shrink-0 px-5 md:px-8 py-2 md:py-2.5 rounded-full border text-[9px] md:text-[10px] font-bold tracking-[0.15em] transition-all duration-300 ${
+                  selectedCategory === cat
+                    ? "bg-[#e5a852] text-black border-[#e5a852] shadow-xl shadow-[#e5a852]/20"
+                    : "bg-white text-gray-500 border-gray-200 hover:border-[#e5a852] hover:text-black"
+                }`}
+              >
+                {cat}
+              </motion.button>
+            ))}
+          </div>
+        </header>
 
-                            <div className="grow overflow-y-auto px-8 py-4">
-                                <WomensFilters
-                                    categories={allCategories}
-                                    sizes={allSizes}
-                                    colors={allColors}
-                                    selectedCategories={selectedCategories}
-                                    setSelectedCategories={setSelectedCategories}
-                                    selectedSizes={selectedSizes}
-                                    setSelectedSizes={setSelectedSizes}
-                                    selectedColors={selectedColors}
-                                    setSelectedColors={setSelectedColors}
-                                    priceRange={priceRange}
-                                    setPriceRange={setPriceRange}
-                                    onClear={clearFilters}
-                                />
-                            </div>
+        {/* ================= PRODUCT GRID ================= */}
+        <main>
+          {isPageLoading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+              {[...Array(6)].map((_, i) => (
+                <ProductSkeleton key={i} />
+              ))}
+            </div>
+          ) : paginatedProducts.length > 0 ? (
+            <motion.div
+              key={selectedCategory + currentPage}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+            >
+              {paginatedProducts.map((product) => (
+                <motion.div
+                  key={product.id}
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="rounded-xl"
+                >
+                  <ProductCard product={product} />
+                </motion.div>
+              ))}
+            </motion.div>
+          ) : (
+            <div className="py-16 md:py-28 text-center bg-white rounded-3xl shadow-lg border border-gray-100 mx-4 md:mx-0">
+              <Search className="mx-auto text-[#e5a852] mb-4 md:mb-6 w-12 h-12 md:w-14 md:h-14" />
+              <h3 className="text-xl md:text-2xl font-serif font-bold text-black">
+                No pieces found
+              </h3>
+              <p className="text-sm md:text-base text-gray-500 mt-2 md:mt-3 mb-6 md:mb-8">
+                Try exploring another category.
+              </p>
+              <button
+                onClick={clearFilters}
+                className="bg-black text-[#e5a852] px-5 py-2 md:px-6 md:py-2 text-sm md:text-base rounded-full font-bold hover:bg-[#e5a852] hover:text-black transition"
+              >
+                Back to All
+              </button>
+            </div>
+          )}
 
-                            <div className="p-6 bg-yellow-50 border-t border-gray-200">
-                                <button
-                                    onClick={() => setIsFilterOpen(false)}
-                                    className="w-full py-4 bg-black text-[#e5a852] text-[10px] font-black uppercase tracking-widest rounded-2xl shadow-xl hover:bg-[#e5a852] hover:text-black transition-all duration-300"
-                                >
-                                    Show {filteredProducts.length} Results
-                                </button>
-                            </div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
-        </div>
-    );
+          {/* ================= PAGINATION ================= */}
+          {!isPageLoading && totalPages > 1 && (
+            <div className="mt-16 md:mt-24 flex items-center justify-center gap-2 md:gap-4">
+              <button
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage((prev) => prev - 1)}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 flex items-center justify-center text-black hover:bg-[#e5a852]/10 disabled:opacity-30 transition shrink-0"
+              >
+                <ArrowLeft size={16} className="md:w-4.5 md:h-4.5" />
+              </button>
+
+              <div className="flex gap-1 md:gap-2 overflow-x-auto hide-scrollbar">
+                {[...Array(totalPages)].map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentPage(i + 1)}
+                    className={`w-10 h-10 md:w-12 md:h-12 rounded-full text-[10px] font-bold transition shrink-0 ${
+                      currentPage === i + 1
+                        ? "bg-black text-[#e5a852]"
+                        : "text-gray-500 hover:text-black"
+                    }`}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage((prev) => prev + 1)}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-200 flex items-center justify-center text-black hover:bg-[#e5a852]/10 disabled:opacity-30 transition shrink-0"
+              >
+                <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
+              </button>
+            </div>
+          )}
+        </main>
+      </div>
+    </div>
+  );
 };
 
 export default Shop;

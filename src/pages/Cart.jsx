@@ -123,7 +123,7 @@ const Cart = () => {
                     <div className="bg-secondary-50 rounded-xl p-8 sticky top-32 border border-secondary-200 shadow-accent-800">
                         <h2 className="text-2xl font-serif font-bold mb-6">Order Summary</h2>
 
-                        <form onSubmit={handleApplyCoupon} className="mb-8">
+                        {/* <form onSubmit={handleApplyCoupon} className="mb-8">
                             <label className="block text-xs font-bold uppercase tracking-widest text-secondary-500 mb-2">Have a coupon?</label>
                             <div className="flex gap-2">
                                 <input
@@ -135,7 +135,7 @@ const Cart = () => {
                                 />
                                 <button type="submit" className="px-6 py-3 bg-black text-[#e5a852] font-bold rounded-lg text-[10px] uppercase tracking-widest hover:bg-[#e5a852] hover:text-black transition-colors">Apply</button>
                             </div>
-                        </form>
+                        </form> */}
 
                         <div className="space-y-4 mb-8">
                             <div className="flex justify-between text-secondary-600">
@@ -169,14 +169,14 @@ const Cart = () => {
                             Checkout Now <ArrowRight size={20} />
                         </button>
 
-                        {shipping > 0 && (
+                        {/* {shipping > 0 && (
                             <div className="mt-8 p-6 bg-black rounded-lg border border-white/5 flex items-start gap-4">
                                 <Tag size={20} className="text-[#e5a852] mt-0.5 shrink-0" />
                                 <p className="text-[10px] text-secondary-400 leading-relaxed font-bold uppercase tracking-widest">
                                     Add <span className="text-[#e5a852]">${(150 - cartTotal).toFixed(2)}</span> more to your cart for <span className="text-white">FREE SHIPPING</span>.
                                 </p>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </aside>
             </div>

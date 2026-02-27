@@ -44,16 +44,16 @@ const WomensHero = () => {
                             <p className="text-secondary-600 text-base mb-8 max-w-md font-medium leading-relaxed">
                                 Explore a collection where luxury meets modern minimalism. Silk dresses, tailored blazers, and artisanal essentials.
                             </p>
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={scrollToShop}
-                                    className="px-8 py-3 bg-black text-[#e5a852] font-black uppercase tracking-widest text-[10px] rounded-full hover:bg-[#e5a852] hover:text-black transition-all duration-300 shadow-xl"
+                                    className="w-full sm:w-auto px-8 py-3 bg-black text-[#e5a852] font-black uppercase tracking-widest text-[10px] rounded-full hover:bg-[#e5a852] hover:text-black transition-all duration-300 shadow-xl"
                                 >
                                     Browse Collection
                                 </button>
                                 <button
                                     onClick={scrollToShop}
-                                    className="px-8 py-3 bg-white border-2 border-black text-black font-black uppercase tracking-widest text-[10px] rounded-full hover:bg-black hover:text-[#e5a852] transition-all duration-300"
+                                    className="w-full sm:w-auto px-8 py-3 bg-white border-2 border-black text-black font-black uppercase tracking-widest text-[10px] rounded-full hover:bg-black hover:text-[#e5a852] transition-all duration-300"
                                 >
                                     View Lookbook
                                 </button>

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, ShoppingBag, Star, Eye } from 'lucide-react';
+import { Heart, ShoppingBag } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const ProductCard = ({ product }) => {
     const { addToCart } = useCart();
@@ -21,113 +20,99 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+        <div
+            className="group flex flex-col gap-5 font-sans border-0 rounded-lg p-2 py-5 shadow-md hover:shadow-lg"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="group relative bg-white rounded-lg overflow-hidden transition-all duration-200 hover:shadow-[0_60px_100px_-20px_rgba(0,0,0,0.1)] border border-transparent hover:border-secondary-50 h-140 w-75"
         >
-            <Link to={`/product/${product.id}`} className="block">
-                <div className="relative aspect-4/5 overflow-hidden bg-secondary-50">
-                    <AnimatePresence mode="wait">
-                        <motion.img
-                            key={isHovered && product.images[1] ? 'alt' : 'main'}
-                            src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
-                            alt={product.name}
-                            initial={{ opacity: 0.8, scale: 1 }}
-                            animate={{ opacity: 1, scale: isHovered ? 1.05 : 1 }}
-                            exit={{ opacity: 0.8 }}
-                            transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                                className="w-full h-full object-cover transition-transform duration-200 ease-out transform-gpu will-change-transform group-hover:scale-105"
-                        />
-                    </AnimatePresence>
+            <Link to={`/product/${product.id}`} className="relative block aspect-4/5 overflow-hidden rounded-lg bg-gray-100">
+                {/* Image */}
+                <img
+                     src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-                    {/* Subtle Overlay */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                    {/* Badges */}
-                    <div className="absolute top-6 left-6 flex flex-col gap-2 z-20">
-                        {product.isNew && (
-                            <span className="bg-white text-secondary-900 text-[8px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded-full shadow-xl">
-                                New Drop
-                            </span>
-                        )}
-                        {product.discount && (
-                            <span className="bg-primary-500 text-secondary-900 text-[8px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded-full shadow-xl">
-                                -{product.discount}%
-                            </span>
-                        )}
-                    </div>
-
-                    {/* Action Bar */}
-                    <div className="absolute bottom-8 left-0 right-0 px-6 flex items-center justify-center gap-3 translate-y-20 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] z-30">
-                        <button
-                            onClick={handleWishlist}
-                            className={`p-4 rounded-2xl shadow-2xl backdrop-blur-xl transition-all duration-300 ${isInWishlist(product.id) ? 'bg-primary-500 text-white shadow-primary-500/20' : 'bg-white/95 text-secondary-900 hover:bg-secondary-900 hover:text-primary-500'}`}
-                        >
-                            <Heart size={18} fill={isInWishlist(product.id) ? "currentColor" : "none"} />
-                        </button>
-                        <button
-                            onClick={handleAddToCart}
-                            className="flex-1 h-14 bg-secondary-900 text-primary-500 rounded-2xl shadow-2xl backdrop-blur-xl hover:bg-black hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[10px] font-black uppercase tracking-[0.2em] flex items-center justify-center gap-2"
-                        >
-                            <ShoppingBag size={18} />
-                            Add to Bag
-                        </button>
-                    </div>
+                {/* Minimalist Badges */}
+                <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10 pointer-events-none">
+                    {product.isNew && (
+                        <span className="text-[10px] font-medium bg-white/90 backdrop-blur-sm text-secondary-900 px-2.5 py-1 uppercase tracking-widest rounded-sm">
+                            New
+                        </span>
+                    )}
+                    {product.discount && (
+                        <span className="text-[10px] font-medium bg-red-500/90 backdrop-blur-sm text-white px-2.5 py-1 uppercase tracking-widest rounded-sm">
+                            -{product.discount}%
+                        </span>
+                    )}
                 </div>
 
-                <div className="p-8 pb-10">
-                    <div className="mb-3">
-                        <span className="text-[9px] text-secondary-400 font-black uppercase tracking-[0.4em]">
-                            {product.category}
-                        </span>
-                    </div>
-
-                    <h3 className="text-lg md:text-xl font-serif font-bold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors duration-200 truncate">
-                        {product.name}
-                    </h3>
-
-                    <div className="flex items-center gap-2 mb-4">
-                        {[1,2,3,4,5].map(i => (
-                            <Star key={i} size={14} className={` ${i <= Math.round(product.rating) ? 'text-primary-500 fill-current' : 'text-secondary-300'} `} />
-                        ))}
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                        <span className="text-2xl font-bold text-secondary-900">
-                            ${product.price}
-                        </span>
-                        {product.oldPrice && (
-                            <span className="text-sm text-secondary-300 line-through font-medium">
-                                ${product.oldPrice}
-                            </span>
-                        )}
-                    </div>
-
-                    {/* Color Swatches */}
-                    <div className="flex gap-2.5 mt-8 items-center">
-                        <div className="flex -space-x-1.5 overflow-hidden">
-                            {product.colors?.slice(0, 3).map((color, i) => (
-                                <div
-                                    key={i}
-                                    className="w-5 h-5 rounded-full border-2 border-white shadow-sm ring-1 ring-secondary-50"
-                                    style={{ backgroundColor: color.toLowerCase().replace(' ', '') }}
-                                    title={color}
-                                />
-                            ))}
-                        </div>
-                        {product.colors?.length > 3 && (
-                            <span className="text-[10px] font-black text-secondary-400 uppercase tracking-widest pl-1">
-                                +{product.colors.length - 3}
-                            </span>
-                        )}
-                    </div>
+                {/* Actions */}
+                <div className="absolute bottom-3 left-3 right-3 flex gap-2 translate-y-0 opacity-100 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out z-20">
+                    <button
+                        onClick={handleAddToCart}
+                        className="flex-1 bg-black backdrop-blur-md text-[#e5a852] py-2.5 lg:py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-widest hover:bg-[#e5a852] hover:text-black transition-colors duration-300 rounded-lg flex items-center justify-center gap-1.5 sm:gap-2 shadow-sm"
+                    >
+                        <ShoppingBag size={14} className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        Add to Bag
+                    </button>
+                    <button
+                        onClick={handleWishlist}
+                        className="bg-white/95 backdrop-blur-md text-secondary-900 p-2.5 lg:p-3 hover:bg-secondary-900 hover:text-white transition-colors duration-300 rounded-lg shadow-sm flex items-center justify-center group/btn"
+                    >
+                        <Heart
+                            size={16}
+                            fill={isInWishlist(product.id) ? "currentColor" : "none"}
+                            className={`transition-colors ${isInWishlist(product.id) ? "text-[#e5a852]" : "text-secondary-900 group-hover/btn:text-white"}`}
+                        />
+                    </button>
                 </div>
             </Link>
-        </motion.div>
+
+            {/* Product Meta */}
+            <div className="flex flex-col gap-1.5 px-1">
+                <div className="flex justify-between items-start gap-2">
+                    <Link to={`/product/${product.id}`} className="flex-1 min-w-0">
+                        <h3 className="text-lg font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors truncate">
+                            {product.name}
+                        </h3>
+                    </Link>
+                    <div className="flex flex-col items-end shrink-0">
+                        <span className="text-lg font-semibold text-secondary-900">
+                            ${product.price}
+                        </span>
+                    </div>
+                </div>
+
+                <div className="flex justify-between items-center">
+                    <span className="text-sm text-secondary-500 capitalize tracking-wide">
+                        {product.category}
+                    </span>
+                    {product.oldPrice && (
+                        <span className="text-xs text-secondary-400 line-through">
+                            ${product.oldPrice}
+                        </span>
+                    )}
+                </div>
+
+                {/* Colors Indicator */}
+                {product.colors && product.colors.length > 0 && (
+                    <div className="flex gap-1.5 mt-1.5">
+                        {product.colors.slice(0, 4).map((color, i) => (
+                            <div
+                                key={i}
+                                className="w-3.5 h-3.5 rounded-full border border-gray-200 shadow-xs"
+                                style={{ backgroundColor: color.toLowerCase().replace(' ', '') }}
+                                title={color}
+                            />
+                        ))}
+                    </div>
+                )}
+            </div>
+        </div>
     );
 };
 

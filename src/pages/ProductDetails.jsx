@@ -1,35 +1,68 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { products } from '../data/products';
+import { useProducts } from '../context/ProductContext';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { useToast } from '../context/ToastContext';
 import { Star, Heart, ShoppingBag, ChevronRight, Ruler, ShieldCheck, Truck, RefreshCw, Minus, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from '../components/product/ProductCard';
+import ReviewSummary from './ReviewSummery';
+import ReviewModal from './Reviewmodel';
+
+
+
+
 
 const ProductDetails = () => {
+    const { products, loading } = useProducts();
     const { id } = useParams();
     const navigate = useNavigate();
     const showToast = useToast();
     const { addToCart } = useCart();
     const { toggleWishlist, isInWishlist } = useWishlist();
 
-    const product = products.find(p => p.id === parseInt(id));
+    const [reviews, setReviews] = useState([]);
+    const [openModal, setOpenModal] = useState(false);
+
+    const handleAddReview = (newReview) => {
+        setReviews([...reviews, newReview]);
+    };
+
+    const product = products.find(p => String(p.id) === String(id));
     const [selectedImage, setSelectedImage] = useState(0);
     const [selectedSize, setSelectedSize] = useState('');
     const [selectedColor, setSelectedColor] = useState('');
     const [quantity, setQuantity] = useState(1);
     const [activeTab, setActiveTab] = useState('description');
 
-    useEffect(() => {
-        if (product) {
-            setSelectedSize(product.sizes?.[0] || '');
-            setSelectedColor(product.colors?.[0] || '');
-            setSelectedImage(0);
-            window.scrollTo(0, 0);
-        }
-    }, [product, id]);
+    const [selectedVariant, setSelectedVariant] = useState(null);
+useEffect(() => {
+  if (product) {
+
+    // If product has variants
+    if (product.variants && product.variants.length > 0) {
+      setSelectedVariant(product.variants[0]);
+    } 
+    // If no variants
+    else {
+      setSelectedVariant({
+        color: "Default",
+        images: product.images
+      });
+    }
+
+    setSelectedImage(0);
+  }
+}, [product]);
+
+    if (loading) {
+        return (
+            <div className="container mx-auto px-4 py-10 text-center">
+                <h2 className="text-2xl font-serif font-bold mb-4">Loading...</h2>
+            </div>
+        );
+    }
 
     if (!product) {
         return (
@@ -46,6 +79,25 @@ const ProductDetails = () => {
     };
 
     const relatedProducts = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+
+    const colorGallery = [
+        { name: "Red", image: product.images[0] },
+        { name: "Black", image: product.images[1] || product.images[0] },
+        { name: "White", image: product.images[2] || product.images[0] },
+        { name: "Beige", image: product.images[3] || product.images[0] },
+        { name: "Brown", image: product.images[0] },
+        { name: "Navy", image: product.images[1] || product.images[0] },
+        { name: "Olive", image: product.images[2] || product.images[0] },
+        { name: "Grey", image: product.images[3] || product.images[0] },
+        { name: "Wine", image: product.images[0] },
+        { name: "Mustard", image: product.images[1] || product.images[0] },
+    ];
+
+    // Instead of strictly same category, we could pick products that are not in the same category
+// or just random products excluding current one
+const peopleAlsoLike = products
+    .filter(p => p.id !== product.id) // exclude current product
+    .slice(0, 4); // show max 4 products
 
     return (
         <div className="pb-10 mt-10">
@@ -65,33 +117,78 @@ const ProductDetails = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 
                     {/* Image Gallery */}
-                    <div className="space-y-3">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.98 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="aspect-4/5 rounded-lg h-150 overflow-hidden bg-secondary-50 relative group"
-                        >
-                            <img
-                                src={product.images[selectedImage]}
-                                alt={product.name}
-                                className="h-200 object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
-                            {product.isNew && (
-                                <span className="absolute top-4 left-4 bg-white text-secondary-900 text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-md z-20">
-                                    New
-                                </span>
-                            )}
-                        </motion.div>
-                        <div className="grid grid-cols-4 gap-3">
-                            {product.images.map((img, idx) => (
+                    {/* Image + Buttons Section */}
+                    <div className="flex flex-col lg:flex-row gap-6 w-full">
+
+                        {/* LEFT – Thumbnails */}
+                        <div className="flex lg:flex-col gap-3 order-2 lg:order-1">
+                            {selectedVariant?.images.map((img, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => setSelectedImage(idx)}
-                                    className={`aspect-square rounded-lg overflow-hidden border-2 transition-all duration-300 ${selectedImage === idx ? 'border-primary-500 scale-95 shadow-md' : 'border-secondary-50 hover:border-secondary-200'}`}
+                                    className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-all duration-300
+                ${selectedImage === idx
+                                            ? 'border-primary-500 shadow-md'
+                                            : 'border-secondary-200 hover:border-secondary-400'
+                                        }`}
                                 >
-                                    <img src={img} alt={`${product.name} view ${idx + 1}`} className="w-full h-full object-cover" />
+                                    <img
+                                        src={img}
+                                        alt={`${product.name} view ${idx + 1}`}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </button>
                             ))}
+                        </div>
+
+                        {/* RIGHT – Main Image + Buttons */}
+                        <div className="flex flex-col flex-1 order-1 lg:order-2">
+
+                            {/* Main Image */}
+                            <motion.div
+                                key={selectedImage}
+                                initial={{ opacity: 0, scale: 0.98 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.3 }}
+                                className="rounded-xl overflow-hidden bg-secondary-50 relative group"
+                            >
+                                <img
+                                    src={selectedVariant?.images[selectedImage]}
+                                    alt={product.name}
+                                    className="w-full h-150 object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+
+                                {product.isNew && (
+                                    <span className="absolute top-4 left-4 bg-white text-secondary-900 text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-md z-20">
+                                        New
+                                    </span>
+                                )}
+                            </motion.div>
+
+                            {/* Buttons Below Image */}
+                            <div className="mt-6 grid grid-cols-2 gap-4">
+
+                                {/* Add To Cart */}
+                                <button
+                                    onClick={handleAddToCart}
+                                    className="col-span-1 h-14 bg-secondary-900 text-white rounded-lg font-black uppercase tracking-[0.2em] text-xs hover:bg-secondary-800 transition-all duration-300 shadow-lg"
+                                >
+                                    Add to Bag
+                                </button>
+
+                                {/* Buy Now */}
+                                <button
+                                    onClick={() => {
+                                        handleAddToCart();
+                                        navigate('/checkout');
+                                    }}
+                                    className="col-span-1 h-14 bg-primary-500 text-white rounded-lg font-black uppercase tracking-[0.3em] text-xs hover:bg-primary-600 transition-all duration-300 shadow-lg"
+                                >
+                                    Buy Now
+                                </button>
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -123,82 +220,125 @@ const ProductDetails = () => {
                             {product.description}
                         </p>
 
+                        {/* Size Selection */}
+                        <div className="mt-6">
+                            <h4 className="text-sm font-extrabold uppercase tracking-[0.2em] text-black mb-3">
+                                Available Sizes
+                            </h4>
+
+                            <div className="flex flex-wrap gap-3">
+                                {product.sizes?.map((size, index) => (
+                                    <motion.button
+                                        key={index}
+                                        onClick={() => setSelectedSize(size)}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className={`min-w-11 h-10 px-3 rounded-xl border-2 text-sm font-bold tracking-widest transition-all duration-300
+                ${selectedSize === size
+                                                ? 'border-primary-500 bg-primary-500 text-white shadow-lg'
+                                                : 'border-secondary-200 text-secondary-700 hover:border-secondary-400'
+                                            }`}
+                                    >
+                                        {size}
+                                    </motion.button>
+                                ))}
+                            </div>
+                        </div>
+
                         {/* Color & Size Selectors */}
-                        <div className="space-y-6">
+                        {/* Premium Color Section - Slider Version */}
+                       {/* Color Section */}
+<div>
+  <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-black mb-3 mt-4">
+    Available Colors
+  </h4>
 
-                            {product.colors && (
-                                <div>
-                                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary-400 mb-1">Color: <span className="text-secondary-900">{selectedColor}</span></h4>
-                                    <div className="flex gap-3">
-                                        {product.colors.map(color => (
-                                            <button
-                                                key={color}
-                                                onClick={() => setSelectedColor(color)}
-                                                className={`w-10 h-10 rounded-full border-2 transition-all ${selectedColor === color ? 'border-primary-500 scale-110 shadow' : 'border-transparent hover:border-secondary-200'}`}
-                                            >
-                                                <div className="w-full h-full rounded-full" style={{ backgroundColor: color.toLowerCase().replace(' ', '') }} />
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
+  <div className="relative">
+    <div className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth pb-2">
 
-                            {product.sizes && (
-                                <div>
-                                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-secondary-400 mb-1">Size: <span className="text-secondary-900">{selectedSize}</span></h4>
-                                    <div className="flex flex-wrap gap-2">
-                                        {product.sizes.map(size => (
-                                            <button
-                                                key={size}
-                                                onClick={() => setSelectedSize(size)}
-                                                className={`px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-widest border-2 transition-all ${selectedSize === size ? 'bg-secondary-900 border-secondary-900 text-primary-500 shadow' : 'bg-white border-secondary-100 text-secondary-900 hover:border-primary-500'}`}
-                                            >
-                                                {size}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
+      {product.variants?.map((variant, index) => (
+        <motion.button
+          key={index}
+          onClick={() => {
+            setSelectedVariant(variant);
+            setSelectedImage(0); // Reset main image
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={`relative min-w-27 group rounded-2xl overflow-hidden border-2 transition-all duration-300
+          ${selectedVariant?.color === variant.color
+              ? 'border-primary-500 shadow-xl ring-2 ring-primary-200'
+              : 'border-secondary-100 hover:border-secondary-300'
+            }`}
+        >
 
-                            {/* Actions */}
-                            <div className="flex flex-wrap gap-3 items-center">
-                                <div className="flex items-center bg-secondary-50 rounded-2xl p-1 h-14">
-                                    <button
-                                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                                        className="h-full w-10 flex items-center justify-center hover:bg-white rounded-xl transition"
-                                    >
-                                        <Minus size={16} />
-                                    </button>
-                                    <span className="w-10 text-center font-black">{quantity}</span>
-                                    <button
-                                        onClick={() => setQuantity(quantity + 1)}
-                                        className="h-full w-10 flex items-center justify-center hover:bg-white rounded-xl transition"
-                                    >
-                                        <Plus size={16} />
-                                    </button>
-                                </div>
+          {/* Show First Image of That Color */}
+          <img
+            src={variant.images[0]}
+            alt={variant.color}
+            className="w-full h-24 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
 
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition" />
+
+          {/* Color Name */}
+          <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md text-[9px] font-black uppercase tracking-widest text-center py-1">
+            {variant.color}
+          </div>
+
+          {/* Selected Badge */}
+          {selectedVariant?.color === variant.color && (
+            <div className="absolute top-2 right-2 bg-primary-500 text-white text-[8px] px-2 py-0.5 rounded-full shadow">
+              Selected
+            </div>
+          )}
+
+        </motion.button>
+      ))}
+
+    </div>
+
+    <div className="pointer-events-none absolute top-0 right-0 h-full w-10 bg-linear-to-l from-white to-transparent" />
+  </div>
+</div>
+                        {/* Quantity Section */}
+                        <div className="mt-2">
+                            <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-black mb-3">
+                                Quantity
+                            </h4>
+
+                            <div className="flex items-center max-w-30 gap-6 border-2 border-secondary-200 rounded-2xl overflow-hidden">
+
+                                {/* Minus Button */}
                                 <button
-                                    onClick={handleAddToCart}
-                                    className="grow btn-primary h-14 text-[10px] font-black uppercase tracking-[0.3em] shadow"
+                                    onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                                    className="w-14 h-14 flex items-center justify-center text-secondary-600 transition"
                                 >
-                                    <ShoppingBag size={16} /> Add to Bag
+                                    <Minus size={18} />
                                 </button>
 
+                                {/* Quantity Display */}
+                                <span className="text-lg font-bold tracking-widest text-secondary-900">
+                                    {quantity}
+                                </span>
+
+                                {/* Plus Button */}
                                 <button
-                                    onClick={() => toggleWishlist(product)}
-                                    className={`w-14 h-14 rounded-2xl flex items-center justify-center border-2 transition-all ${isInWishlist(product.id) ? 'bg-[#e5a852] border-[#e5a852] text-white shadow' : 'bg-white border-secondary-100 text-secondary-900 hover:border-secondary-900'}`}
+                                    onClick={() => setQuantity(prev => prev + 1)}
+                                    className="w-14 h-14 flex items-center justify-center text-secondary-600 transition"
                                 >
-                                    <Heart size={18} fill={isInWishlist(product.id) ? "currentColor" : "none"} />
+                                    <Plus size={18} />
                                 </button>
                             </div>
                         </div>
 
+
                         {/* USP Features */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 bg-secondary-50/50 rounded-2xl border border-secondary-100 mt-6">
                             {[{ icon: <Truck size={20} />, title: "Shipping", subtitle: "2-4 Days" },
-                              { icon: <RefreshCw size={20} />, title: "Returns", subtitle: "30-Day" },
-                              { icon: <ShieldCheck size={20} />, title: "Secure", subtitle: "Safe Checkout" }].map((feature, i) => (
+                            { icon: <RefreshCw size={20} />, title: "Returns", subtitle: "30-Day" },
+                            { icon: <ShieldCheck size={20} />, title: "Secure", subtitle: "Safe Checkout" }].map((feature, i) => (
                                 <div key={i} className="flex flex-col gap-1">
                                     <div className="text-primary-500">{feature.icon}</div>
                                     <div>
@@ -212,43 +352,62 @@ const ProductDetails = () => {
                 </div>
 
                 {/* Tabs */}
-                <div className="mt-6">
-                    <div className="flex items-center border-b border-secondary-200 overflow-x-auto no-scrollbar">
-                        {['description','details','reviews'].map(tab => (
-                            <button
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                className={`px-6 py-3 text-[10px] font-black uppercase tracking-[0.3em] whitespace-nowrap transition-all ${activeTab === tab ? 'text-primary-500 bg-secondary-900 rounded-t-2xl shadow' : 'text-secondary-500 hover:text-secondary-900'}`}
-                            >
-                                {tab === 'reviews' ? `Reviews (${product.reviews})` : tab.charAt(0).toUpperCase() + tab.slice(1)}
-                            </button>
-                        ))}
-                    </div>
+                {/* Product Information Sections - Vertical Style */}
+                <div className="mt-8 space-y-6">
 
-                    <div className="py-6 min-h-48">
-                        <AnimatePresence mode="wait">
-                            {activeTab === 'description' && (
-                                <motion.div key="desc" initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }} exit={{ opacity:0, y:10 }}>
-                                    <p className="text-secondary-600 text-base leading-relaxed">{product.description}</p>
-                                </motion.div>
-                            )}
+
+
+                    {/* DETAILS */}
+                    <div className="border border-secondary-200 rounded-2xl overflow-hidden">
+                        <button
+                            onClick={() => setActiveTab(activeTab === 'details' ? '' : 'details')}
+                            className="w-full flex justify-between items-center px-6 py-5 bg-secondary-50 text-left"
+                        >
+                            <span className="text-sm font-bold uppercase">
+                                Product Details
+                            </span>
+                            <span className="text-lg">
+                                {activeTab === 'details' ? '-' : '+'}
+                            </span>
+                        </button>
+
+                        <AnimatePresence>
                             {activeTab === 'details' && (
-                                <motion.div key="details" initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }} exit={{ opacity:0, y:10 }} className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-secondary-600">
-                                    {['Fabric','Pattern','Fit','Neckline','SKU','Origin'].map((key,i) => (
-                                        <div key={i} className="flex justify-between py-1 border-b border-secondary-100">
-                                            <span className="font-medium">{key}</span>
-                                            <span>{key==='SKU'? `7F-DW-2026-${product.id}` : key==='Fabric'? 'Silk Blend':'Regular'}</span>
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: 'auto', opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="px-5 py-4 space-y-3 text-secondary-600 text-sm"
+                                >
+                                    {[
+                                        { label: "Fabric", value: "Silk Blend" },
+                                        { label: "Pattern", value: "Printed" },
+                                        { label: "Fit", value: "Regular Fit" },
+                                        { label: "Neckline", value: "Round Neck" },
+                                        { label: "SKU", value: `7F-DW-2026-${product.id}` },
+                                        { label: "Origin", value: "India" },
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex justify-between border-b border-secondary-100 pb-2">
+                                            <span>{item.label}</span>
+                                            <span className="font-medium">{item.value}</span>
                                         </div>
                                     ))}
                                 </motion.div>
                             )}
-                            {activeTab === 'reviews' && (
-                                <motion.div key="reviews" initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }} exit={{ opacity:0, y:10 }} className="space-y-4">
-                                    <p className="text-secondary-600">Average Rating: {product.rating} / 5 ({product.reviews} reviews)</p>
-                                </motion.div>
-                            )}
                         </AnimatePresence>
                     </div>
+
+                    <ReviewSummary
+                        reviews={reviews}
+                        onAddReview={() => setOpenModal(true)}
+                    />
+
+                    <ReviewModal
+                        isOpen={openModal}
+                        onClose={() => setOpenModal(false)}
+                        onSubmit={handleAddReview}
+                    />
+
                 </div>
 
                 {/* Related Products */}
@@ -260,6 +419,18 @@ const ProductDetails = () => {
                         </div>
                     </section>
                 )}
+
+                {/* People Also Like */}
+{peopleAlsoLike.length > 0 && (
+    <section className="mt-6 border-t border-secondary-100 pt-6">
+        <h2 className="text-2xl font-serif font-bold mb-4">People Also Buy</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {peopleAlsoLike.map(p => (
+                <ProductCard key={p.id} product={p} />
+            ))}
+        </div>
+    </section>
+)}
 
             </div>
         </div>

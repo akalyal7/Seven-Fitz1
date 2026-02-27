@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { products } from "../../data/products";
+import { useProducts } from "../../context/ProductContext";
 import ProductCard from "../product/ProductCard";
 import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {
+  const { products, loading } = useProducts();
   // Get featured products
   const featured = products.filter((p) => p.isFeatured);
 
@@ -13,6 +14,8 @@ const FeaturedProducts = () => {
     featured.length >= 8
       ? featured.slice(0, 8)
       : products.slice(0, 8);
+
+  if (loading) return <p className="py-24 text-center">Loading...</p>;
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">

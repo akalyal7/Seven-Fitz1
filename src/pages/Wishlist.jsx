@@ -50,7 +50,7 @@ const Wishlist = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="group relative bg-white rounded-lg h-160 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-secondary-50"
+                            className="group relative bg-white rounded-lg h-150 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-secondary-50"
                         >
                             <div className="relative aspect-3/4 overflow-hidden bg-secondary-100">
                                 <img
@@ -86,7 +86,7 @@ const Wishlist = () => {
                                 <div className="space-y-2">
                                     <button
                                         onClick={() => handleMoveToCart(product)}
-                                        className="w-full btn-gold py-3 text-[10px] uppercase tracking-widest shadow-xl shadow-primary-500/10 flex items-center justify-center gap-2"
+                                        className="w-full btn-gold py-3 text-[10px] uppercase tracking-widest shadow-xl rounded-lg shadow-primary-500/10 flex items-center justify-center gap-2"
                                     >
                                         <ShoppingBag size={14} /> Move to Cart
                                     </button>
