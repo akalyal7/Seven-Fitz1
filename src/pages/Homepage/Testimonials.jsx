@@ -81,7 +81,7 @@ const Testimonials = () => {
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6">
-            Our Cutomers<span className="text-[#e5a852]"> Says</span>
+            Our Customers<span className="text-[#e5a852]"> Says</span>
           </h2>
 
           <div className="w-20 h-0.75 bg-linear-to-r from-yellow-400 via-[#e5a852] to-yellow-700 mx-auto rounded-full" />

@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
             <Link to={`/product/${product.id}`} className="relative block aspect-4/5 overflow-hidden rounded-lg bg-gray-100">
                 {/* Image */}
                 <img
-                     src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
+                    src={isHovered && product.images[1] ? product.images[1] : product.images[0]}
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
@@ -82,7 +82,7 @@ const ProductCard = ({ product }) => {
                     </Link>
                     <div className="flex flex-col items-end shrink-0">
                         <span className="text-lg font-semibold text-secondary-900">
-                            ${product.price}
+                            ₹{product.price}
                         </span>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ const ProductCard = ({ product }) => {
                     </span>
                     {product.oldPrice && (
                         <span className="text-xs text-secondary-400 line-through">
-                            ${product.oldPrice}
+                            ₹{product.oldPrice}
                         </span>
                     )}
                 </div>

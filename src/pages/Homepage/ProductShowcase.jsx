@@ -14,9 +14,9 @@ const ProductShowcase = () => {
   if (loading) return <p className="w-full text-center py-20">Loading...</p>;
 
   const displayProducts = [
-    { ...products?.[0], top: "28%", left: "35%", image: products?.[0]?.images?.[0] || "", title: products?.[0]?.name, price: `$${products?.[0]?.price}` },
-    { ...products?.[1], top: "50%", left: "48%", image: products?.[1]?.images?.[0] || "", title: products?.[1]?.name, price: `$${products?.[1]?.price}` },
-    { ...products?.[2], top: "85%", left: "55%", image: products?.[2]?.images?.[0] || "", title: products?.[2]?.name, price: `$${products?.[2]?.price}` },
+    { ...products?.[0], top: "28%", left: "35%", image: products?.[0]?.images?.[0] || "", title: products?.[0]?.name, price: `₹${products?.[0]?.price}` },
+    { ...products?.[1], top: "50%", left: "48%", image: products?.[1]?.images?.[0] || "", title: products?.[1]?.name, price: `₹${products?.[1]?.price}` },
+    { ...products?.[2], top: "85%", left: "55%", image: products?.[2]?.images?.[0] || "", title: products?.[2]?.name, price: `₹${products?.[2]?.price}` },
   ].filter(p => p && p.name);
 
   return (

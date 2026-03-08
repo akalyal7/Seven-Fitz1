@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import { useToast } from '../context/ToastContext';
+import { useCart } from '../../context/CartContext';
+import { useToast } from '../../context/ToastContext';
 import { Trash2, ShoppingBag, ArrowRight, Minus, Plus, Tag, Info } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -28,7 +28,7 @@ const Cart = () => {
 
     if (cartItems.length === 0) {
         return (
-            <div className="container mx-auto px-2 py-50 text-center">
+            <div className="container-custom py-50 text-center">
                 <div className="w-24 h-24 bg-black text-[#e5a852] rounded-lg flex items-center justify-center mx-auto mb-8 shadow-2xl">
                     <ShoppingBag size={40} />
                 </div>
@@ -42,7 +42,7 @@ const Cart = () => {
     }
 
     return (
-        <div className="container mx-auto px-4 md:px-30 py-22 md:py-15">
+        <div className="container-custom py-22 md:py-15">
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 ">Shopping <span className="text-[#e5a852]">Cart </span> </h1>
 
@@ -80,8 +80,10 @@ const Cart = () => {
                                             </button>
                                         </div>
                                         <p className="text-sm text-secondary-500 mb-4">
-                                            Size: <span className="text-secondary-900 font-semibold">{item.selectedSize}</span> 
-                                            {/* Color: <span className="text-secondary-900 font-semibold">{item.selectedColor}</span> */}
+                                            Size: <span className="text-secondary-900 font-semibold">{item.selectedSize}</span>
+                                            {item.selectedColor && (
+                                                <> | Color: <span className="text-secondary-900 font-semibold">{item.selectedColor}</span></>
+                                            )}
                                         </p>
                                     </div>
 
@@ -101,7 +103,7 @@ const Cart = () => {
                                                 <Plus size={14} />
                                             </button>
                                         </div>
-                                        <span className="text-lg font-black text-secondary-900">${(item.price * item.quantity).toFixed(2)}</span>
+                                        <span className="text-lg font-black text-secondary-900">₹{(item.price * item.quantity).toFixed(2)}</span>
                                     </div>
                                 </div>
                             </motion.div>
@@ -140,25 +142,25 @@ const Cart = () => {
                         <div className="space-y-4 mb-8">
                             <div className="flex justify-between text-secondary-600">
                                 <span>Subtotal</span>
-                                <span>${cartTotal.toFixed(2)}</span>
+                                <span>₹{cartTotal.toFixed(2)}</span>
                             </div>
                             <div className="flex justify-between text-secondary-600">
                                 <span>Estimated Shipping</span>
-                                <span>{shipping === 0 ? <span className="text-green-600 font-bold">Free</span> : `$${shipping.toFixed(2)}`}</span>
+                                <span>{shipping === 0 ? <span className="text-green-600 font-bold">Free</span> : `₹${shipping.toFixed(2)}`}</span>
                             </div>
                             <div className="flex justify-between text-secondary-600">
                                 <span>Estimated Tax (8%)</span>
-                                <span>${tax.toFixed(2)}</span>
+                                <span>₹{tax.toFixed(2)}</span>
                             </div>
                             {discount > 0 && (
                                 <div className="flex justify-between text-green-600 font-medium">
                                     <span>Discount</span>
-                                    <span>-${discount.toFixed(2)}</span>
+                                    <span>-₹{discount.toFixed(2)}</span>
                                 </div>
                             )}
                             <div className="pt-5 border-t border-secondary-200 flex uppercase justify-between text-xl font-sans font-bold text-black">
                                 <span>Total</span>
-                                <span className="text-[#e5a852]">${total.toFixed(2)}</span>
+                                <span className="text-[#e5a852]">₹{total.toFixed(2)}</span>
                             </div>
                         </div>
 

@@ -5,17 +5,22 @@ import { CartProvider } from './context/CartContext';
 import { WishlistProvider } from './context/WishlistContext';
 import { ToastProvider } from './context/ToastContext';
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/ScrollToTop';
 
 // Lazy load pages for performance
-const Home = lazy(() => import('./pages/Home'));
-const Shop = lazy(() => import('./pages/Shop'));
-const ProductDetails = lazy(() => import('./pages/ProductDetails'));
-const Cart = lazy(() => import('./pages/Cart'));
-const Checkout = lazy(() => import('./pages/Checkout'));
-const Wishlist = lazy(() => import('./pages/Wishlist'));
-const Profile = lazy(() => import('./pages/Profile'));
-const Login = lazy(() => import('./pages/Login'));
-const Register = lazy(() => import('./pages/Register'));
+const Home = lazy(() => import('./pages/Homepage/Home'));
+const Shop = lazy(() => import('./pages/Shop/Shop'));
+const ProductDetails = lazy(() => import('./pages/Productdetails/ProductDetails'));
+const Cart = lazy(() => import('./pages/Cart/Cart'));
+const Checkout = lazy(() => import('./pages/Checkout/Checkout'));
+const Wishlist = lazy(() => import('./pages/Whishlist/Wishlist'));
+const Profile = lazy(() => import('./pages/Userprofile/Profile'));
+const TrackOrders = lazy(() => import('./pages/Userprofile/TrackOrders'));
+const Login = lazy(() => import('./pages/Userprofile/Login'));
+const Register = lazy(() => import('./pages/Userprofile/Register'));
+const ForgetPassword = lazy(() => import('./pages/Userprofile/ForgetPassword'));
+const AccountVerification = lazy(() => import('./pages/Userprofile/AccountVerification'));
+const ResetPassword = lazy(() => import('./pages/Userprofile/ResetPassword'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Returns = lazy(() => import('./pages/Returns'));
@@ -33,6 +38,7 @@ function App() {
         <CartProvider>
           <WishlistProvider>
             <Router>
+              <ScrollToTop />
               <Layout>
                 <Suspense fallback={<LoadingFallback />}>
                   <Routes>
@@ -43,8 +49,12 @@ function App() {
                     <Route path="/checkout" element={<Checkout />} />
                     <Route path="/wishlist" element={<Wishlist />} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/track-order/:id" element={<TrackOrders />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/forgot-password" element={<ForgetPassword />} />
+                    <Route path="/verify-otp" element={<AccountVerification />} />
+                    <Route path="/reset-password" element={<ResetPassword />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/returns" element={<Returns />} />

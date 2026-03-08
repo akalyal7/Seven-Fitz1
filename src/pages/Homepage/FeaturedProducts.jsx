@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useProducts } from "../../context/ProductContext";
-import ProductCard from "../product/ProductCard";
+import ProductCard from "../../components/product/ProductCard";
 import { Link } from "react-router-dom";
 
 const FeaturedProducts = () => {

@@ -128,11 +128,11 @@
   }
 
   .btn-gold {
-    @apply px-6 py-3 md:px-10 md:py-4 text-sm md:text-base bg-primary-500 text-secondary-900 border border-primary-500 font-bold rounded-full hover:bg-secondary-900 hover:text-primary-500 transition-all duration-500 active:scale-95 flex items-center justify-center gap-2;
+    @apply px-6 py-3 md:px-10 md:py-4 text-sm md:text-base bg-[#e5a852] text-secondary-900 border border-[#e5a852] font-bold rounded-lg hover:bg-secondary-900 hover:text-[#e5a852] transition-all duration-500 active:scale-95 flex items-center justify-center gap-2;
   }
 
   .input-field {
-    @apply w-full px-6 py-4 bg-secondary-50 border border-secondary-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all;
+    @apply w-full px-6 py-3 bg-secondary-50 border border-secondary-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ffbf67] focus:border-transparent transition-all;
   }
 
   .section-padding {
@@ -176,7 +176,7 @@
   }
 
   .text-gradient-gold {
-    @apply bg-clip-text text-transparent bg-linear-to-r from-primary-500 via-primary-300 to-primary-500 bg-size-[200%_auto] animate-shimmer;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-[#e5a852] via-primary-300 to-[#e5a852] bg-size-[200%_auto] animate-shimmer;
   }
 
   .bg-mesh-dark {
@@ -204,10 +204,13 @@
 
 /* Hide Scrollbar - Premium Clean Look */
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
+  /* Chrome, Safari */
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

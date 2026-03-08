@@ -5,13 +5,13 @@ const Services = () => {
   const features = [
     {
       icon: <RefreshCcw />,
-      title: "30 DAYS RETURN",
-      desc: "If any damage simply return it within 30 days for an exchange.",
+      title: "NO RETURN POLICY",
+      desc: "Unboxing video required for any damage claims.",
     },
     {
       icon: <Truck />,
-      title: "FREE US DELIVERY",
-      desc: "On orders over $200!",
+      title: "SHIPPING CHARGES APPLY",
+      desc: "Delivery charges are calculated based on your location and distance.",
     },
     {
       icon: <Phone />,
