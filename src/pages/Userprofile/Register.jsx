@@ -365,19 +365,12 @@ const settings = {
               <p>
                 I agree to the{" "}
                 <Link
-                  to="/terms"
+                  to="/Termsandconditions"
                   className="text-primary-500 hover:text-secondary-900"
                 >
-                  Terms
-                </Link>{" "}
-                and{" "}
-                <Link
-                  to="/privacy"
-                  className="text-primary-500 hover:text-secondary-900"
-                >
-                  Privacy Policy
+                   Terms & Conditions
                 </Link>
-                .
+                
               </p>
             </div>
 

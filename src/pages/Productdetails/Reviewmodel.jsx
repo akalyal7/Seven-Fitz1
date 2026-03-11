@@ -63,7 +63,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden"
+            className="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Header */}
             <div className="px-8 py-6 bg-secondary-900 text-white">
@@ -79,10 +79,8 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                 placeholder="Your Name"
                 required
                 value={form.name}
-                onChange={(e) =>
-                  setForm({ ...form, name: e.target.value })
-                }
-                className="w-full border-2 border-secondary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 p-3 rounded-2xl outline-none transition-all duration-300 font-medium text-secondary-900"
+                readOnly
+                className="w-full border-2 border-secondary-200 focus:border-[#e5a852] focus:ring-4 focus:ring-primary-100 p-3 rounded-lg outline-none transition-all duration-300 font-medium text-secondary-900"
               />
 
               {/* Star Rating */}
@@ -118,7 +116,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                 onChange={(e) =>
                   setForm({ ...form, comment: e.target.value })
                 }
-                className="w-full border-2 border-secondary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 p-4 rounded-2xl outline-none transition-all duration-300 min-h-25 font-medium text-secondary-900 resize-none"
+                className="w-full border-2 border-secondary-200 focus:border-[#e5a852] focus:ring-4 focus:ring-primary-100 p-4 rounded-lg outline-none transition-all duration-300 min-h-25 font-medium text-secondary-900 resize-none"
               />
 
               {/* Image Upload Section */}
@@ -149,7 +147,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                   ))}
 
                   {images.length < 3 && (
-                    <label className="flex items-center justify-center h-24 border-2 border-dashed border-secondary-300 rounded-xl cursor-pointer hover:border-primary-500 hover:bg-primary-50/50 transition-all duration-300">
+                    <label className="flex items-center justify-center h-24 border-2 border-dashed border-secondary-300 rounded-xl cursor-pointer hover:border-[#e5a852] hover:bg-primary-50/50 transition-all duration-300">
                       <ImagePlus className="text-secondary-400" />
                       <input
                         type="file"
@@ -168,7 +166,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                 <button
                   type="button"
                   onClick={onClose}
-                  className="px-6 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-secondary-500 hover:text-secondary-900 transition-colors"
+                  className="px-6 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-black border border-[#e5a852] rounded-lg hover:bg-black hover:text-[#e5a852] transition-colors "
                 >
                   Cancel
                 </button>
@@ -176,7 +174,7 @@ const ReviewModal = ({ isOpen, onClose, onSubmit }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="px-8 py-3 bg-primary-500 text-white rounded-xl text-[11px] font-black uppercase tracking-[0.2em] shadow-lg hover:bg-primary-600 transition-all duration-300"
+                  className="px-8 py-3 bg-[#e5a852] text-black rounded-lg text-[11px] font-black uppercase tracking-[0.2em] shadow-lg hover:bg-black hover:text-[#e5a852] transition-all duration-300"
                 >
                   Submit
                 </motion.button>

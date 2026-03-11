@@ -86,7 +86,7 @@ const ReviewSummary = ({ reviews, onAddReview }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onAddReview}
-              className="h-12 px-8 bg-secondary-900 text-[#ffbf67] rounded-lg text-[10px] font-black uppercase tracking-[0.2em] shadow-lg hover:bg-[#ffbf67] hover:text-black transition-all duration-300"
+              className="h-12 px-8 bg-black text-[#ffbf67] rounded-lg text-[10px] font-black uppercase tracking-[0.2em] shadow-lg hover:bg-[#ffbf67] hover:text-black transition-all duration-300"
             >
               Write Review
             </motion.button>

@@ -29,18 +29,16 @@ const EpicCollection = () => {
             Shop by <span className="text-[#e5a852]">Categories</span>
           </h2>
 
-          <div className="w-16 h-0.5 bg-[#e5a852] mx-auto mt-6" />
+          <div className="w-16 h-0.75 bg-[#e5a852] mx-auto mt-6" />
 
-          <p className="text-gray-500 mt-6 max-w-lg mx-auto text-lg">
-            Discover timeless elegance curated with premium craftsmanship.
-          </p>
+
         </motion.div>
 
         {/* Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-start">
 
           {/* LEFT SIDE - Sticky Luxury Banner */}
-          <div className="relative h-[85vh] mt-20">
+          <div className="relative h-[50vh] lg:h-[85vh] mt-10 lg:mt-20">
             <div className="sticky top-28 h-full">
 
               <motion.div
@@ -80,7 +78,7 @@ const EpicCollection = () => {
           </div>
 
           {/* RIGHT SIDE - Scroll Feed */}
-          <div className="h-[85vh] overflow-y-auto pr-2 space-y-7 scrollbar-hide">
+          <div className="h-[60vh] lg:h-[85vh] overflow-y-auto pr-2 space-y-7 scrollbar-hide">
 
             {categories && categories.length > 0 ? (
               categories.map((category) => (

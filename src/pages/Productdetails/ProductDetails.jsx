@@ -31,6 +31,7 @@ const ProductDetails = () => {
     const [selectedColor, setSelectedColor] = useState('');
     const [quantity, setQuantity] = useState(1);
     const [activeTab, setActiveTab] = useState('description');
+    const [showProductDetails, setShowProductDetails] = useState(false);
 
     const [selectedVariant, setSelectedVariant] = useState(null);
     useEffect(() => {
@@ -107,94 +108,97 @@ const ProductDetails = () => {
         <div className="pb-10 mt-10">
             <div className="container-custom py-6">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
 
-                    {/* Left Column: Breadcrumbs + Image Gallery */}
-                    <div className="flex flex-col gap-6 w-full lg:sticky lg:top-24 z-10">
+                    {/* Left Column wrapper to stretch height */}
+                    <div className="w-full">
+                        {/* Sticky Left Column: Breadcrumbs + Image Gallery */}
+                        <div className="flex flex-col gap-6 w-full lg:sticky lg:top-24 z-10">
 
-                        {/* Breadcrumbs */}
-                        <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-secondary-400 px-2">
-                            <Link to="/" className="hover:text-primary-500 transition-colors">Home</Link>
-                            <ChevronRight size={10} className="text-secondary-200" />
-                            <Link to="/shop" className="hover:text-primary-500 transition-colors">Shop</Link>
-                            <ChevronRight size={10} className="text-secondary-200" />
-                            <Link to={`/shop?category=${product.category}`} className="hover:text-primary-500 transition-colors">{product.category}</Link>
-                            <ChevronRight size={10} className="text-secondary-200" />
-                            <span className="text-secondary-900 truncate">{product.name}</span>
-                        </nav>
+                            {/* Breadcrumbs */}
+                            <nav className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-secondary-400 px-2">
+                                <Link to="/" className="hover:text-[#e5a852] transition-colors">Home</Link>
+                                <ChevronRight size={10} className="text-secondary-200" />
+                                <Link to="/shop" className="hover:text-[#e5a852] transition-colors">Shop</Link>
+                                <ChevronRight size={10} className="text-secondary-200" />
+                                <Link to={`/shop?category=${product.category}`} className="hover:text-[#e5a852] transition-colors">{product.category}</Link>
+                                <ChevronRight size={10} className="text-secondary-200" />
+                                <span className="text-secondary-900 truncate">{product.name}</span>
+                            </nav>
 
-                        {/* Image + Buttons Section */}
-                        <div className="flex flex-col lg:flex-row gap-6 w-full">
+                            {/* Image + Buttons Section */}
+                            <div className="flex flex-col lg:flex-row gap-6 w-full">
 
-                            {/* LEFT – Thumbnails */}
-                            <div className="flex lg:flex-col gap-3 order-2 lg:order-1">
-                                {selectedVariant?.images.map((img, idx) => (
-                                    <button
-                                        key={idx}
-                                        onClick={() => setSelectedImage(idx)}
-                                        className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-all duration-300
+                                {/* LEFT – Thumbnails */}
+                                <div className="flex lg:flex-col gap-3 order-2 lg:order-1">
+                                    {selectedVariant?.images.map((img, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => setSelectedImage(idx)}
+                                            className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-all duration-300
                 ${selectedImage === idx
-                                                ? 'border-primary-500 shadow-md'
-                                                : 'border-secondary-200 hover:border-secondary-400'
-                                            }`}
-                                    >
-                                        <img
-                                            src={img}
-                                            alt={`${product.name} view ${idx + 1}`}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </button>
-                                ))}
-                            </div>
-
-                            {/* RIGHT – Main Image + Buttons */}
-                            <div className="flex flex-col flex-1 order-1 lg:order-2">
-
-                                {/* Main Image */}
-                                <motion.div
-                                    key={selectedImage}
-                                    initial={{ opacity: 0, scale: 0.98 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="rounded-xl overflow-hidden bg-secondary-50 relative group"
-                                >
-                                    <img
-                                        src={selectedVariant?.images[selectedImage]}
-                                        alt={product.name}
-                                        className="w-full h-150 object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-
-                                    {product.isNew && (
-                                        <span className="absolute top-4 left-4 bg-white text-secondary-900 text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-md z-20">
-                                            New
-                                        </span>
-                                    )}
-                                </motion.div>
-
-                                {/* Buttons Below Image */}
-                                <div className="mt-6 grid grid-cols-2 gap-4">
-
-                                    {/* Add To Cart */}
-                                    <button
-                                        onClick={handleAddToCart}
-                                        className="col-span-1 h-14 bg-secondary-900 text-white rounded-lg font-black uppercase tracking-[0.2em] text-xs hover:bg-secondary-800 transition-all duration-300 shadow-lg"
-                                    >
-                                        Add to Bag
-                                    </button>
-
-                                    {/* Buy Now */}
-                                    <button
-                                        onClick={() => {
-                                            handleAddToCart();
-                                            navigate('/checkout');
-                                        }}
-                                        className="col-span-1 h-14 bg-primary-500 text-white rounded-lg font-black uppercase tracking-[0.3em] text-xs hover:bg-primary-600 transition-all duration-300 shadow-lg"
-                                    >
-                                        Buy Now
-                                    </button>
-
+                                                    ? 'border-[#e5a852] shadow-md'
+                                                    : 'border-secondary-200 hover:border-secondary-400'
+                                                }`}
+                                        >
+                                            <img
+                                                src={img}
+                                                alt={`${product.name} view ${idx + 1}`}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </button>
+                                    ))}
                                 </div>
 
+                                {/* RIGHT – Main Image + Buttons */}
+                                <div className="flex flex-col flex-1 order-1 lg:order-2">
+
+                                    {/* Main Image */}
+                                    <motion.div
+                                        key={selectedImage}
+                                        initial={{ opacity: 0, scale: 0.98 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="rounded-xl overflow-hidden bg-secondary-50 relative group"
+                                    >
+                                        <img
+                                            src={selectedVariant?.images[selectedImage]}
+                                            alt={product.name}
+                                            className="w-full h-150 object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
+
+                                        {product.isNew && (
+                                            <span className="absolute top-4 left-4 bg-white text-secondary-900 text-[9px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-md z-20">
+                                                New
+                                            </span>
+                                        )}
+                                    </motion.div>
+
+                                    {/* Buttons Below Image */}
+                                    <div className="mt-6 grid grid-cols-2 gap-4">
+
+                                        {/* Add To Cart */}
+                                        <button
+                                            onClick={handleAddToCart}
+                                            className="col-span-1 h-14 bg-black text-[#ffbf67] rounded-lg font-black uppercase tracking-[0.2em] text-xs hover:text-white transition-all duration-300 shadow-lg"
+                                        >
+                                            Add to Bag
+                                        </button>
+
+                                        {/* Buy Now */}
+                                        <button
+                                            onClick={() => {
+                                                handleAddToCart();
+                                                navigate('/checkout');
+                                            }}
+                                            className="col-span-1 h-14 bg-[#e5a852] text-black rounded-lg font-black uppercase tracking-[0.3em] text-xs hover:text-white transition-all duration-300 shadow-lg"
+                                        >
+                                            Buy Now
+                                        </button>
+
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -203,11 +207,11 @@ const ProductDetails = () => {
                     <div className="flex flex-col">
                         <div className="mb-6">
                             <div className="flex items-center gap-4 mb-4">
-                                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary-600 bg-primary-500/10 px-3 py-1.5 rounded-full">
+                                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#e5a852] bg-primary-500/10 px-3 py-1.5 rounded-full">
                                     {product.category}
                                 </span>
                                 <div className="flex items-center gap-1 text-xs font-black text-secondary-900 bg-secondary-50 px-2 py-1 rounded-full">
-                                    <Star size={14} className="text-primary-500 fill-current" />
+                                    <Star size={14} className="text-[#e5a852] fill-current" />
                                     <span>{product.rating}</span>
                                     <span className="text-secondary-400 pl-1 border-l border-secondary-200 ml-1">{product.reviews} Reviews</span>
                                 </div>
@@ -242,7 +246,7 @@ const ProductDetails = () => {
                                         whileTap={{ scale: 0.95 }}
                                         className={`min-w-11 h-10 px-3 rounded-xl border-2 text-sm font-bold tracking-widest transition-all duration-300
                 ${selectedSize === size
-                                                ? 'border-primary-500 bg-primary-500 text-white shadow-lg'
+                                                ? 'border-[#e5a852] text-black shadow-lg'
                                                 : 'border-secondary-200 text-secondary-700 hover:border-secondary-400'
                                             }`}
                                     >
@@ -272,7 +276,7 @@ const ProductDetails = () => {
                                             whileTap={{ scale: 0.95 }}
                                             className={`relative min-w-27 group rounded-2xl overflow-hidden border-2 transition-all duration-300
           ${selectedVariant?.color === variant.color
-                                                    ? 'border-primary-500 shadow-xl ring-2 ring-primary-200'
+                                                    ? 'border-[#e5a852] shadow-xl ring-2 ring-primary-200'
                                                     : 'border-secondary-100 hover:border-secondary-300'
                                                 }`}
                                         >
@@ -294,7 +298,7 @@ const ProductDetails = () => {
 
                                             {/* Selected Badge */}
                                             {selectedVariant?.color === variant.color && (
-                                                <div className="absolute top-2 right-2 bg-primary-500 text-white text-[8px] px-2 py-0.5 rounded-full shadow">
+                                                <div className="absolute top-2 right-2 bg-[#e5a852] text-white text-[8px] px-2 py-0.5 rounded-full shadow">
                                                     Selected
                                                 </div>
                                             )}
@@ -338,14 +342,13 @@ const ProductDetails = () => {
                             </div>
                         </div>
 
-
                         {/* USP Features */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 bg-secondary-50/50 rounded-2xl border border-secondary-100 mt-8">
                             {[{ icon: <Sparkles size={20} />, title: "Premium Fabric", subtitle: "High Quality" },
                             { icon: <Tag size={20} />, title: "Lowest Price", subtitle: "Guaranteed" },
                             { icon: <ShieldCheck size={20} />, title: "Secure", subtitle: "Safe Checkout" }].map((feature, i) => (
                                 <div key={i} className="flex flex-col gap-1 items-center sm:items-start text-center sm:text-left">
-                                    <div className="text-primary-500 mb-1">{feature.icon}</div>
+                                    <div className="text-[#e5a852] mb-1">{feature.icon}</div>
                                     <div>
                                         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-secondary-900 mb-0.5">{feature.title}</p>
                                         <p className="text-[10px] font-bold text-secondary-400 uppercase tracking-widest">{feature.subtitle}</p>
@@ -355,28 +358,48 @@ const ProductDetails = () => {
                         </div>
 
                         {/* DETAILS */}
-                        <div className="border border-gray-100 rounded-3xl overflow-hidden mt-8 bg-white/70 backdrop-blur-xl shadow-lg">
-                            <div className="w-full px-8 py-6 bg-white border-b border-gray-100">
+                        <div className="border border-gray-100 rounded-3xl overflow-hidden mt-8 bg-white/70 backdrop-blur-xl shadow-lg transition-all duration-300">
+                            <div
+                                className="w-full px-8 py-6 bg-white border-b border-gray-100 flex justify-between items-center cursor-pointer hover:bg-gray-50 transition-colors"
+                                onClick={() => setShowProductDetails(!showProductDetails)}
+                            >
                                 <span className="text-lg font-bold text-gray-800 font-sans">
                                     Product Details
                                 </span>
+                                <button
+                                    type="button"
+                                    className="text-sm font-bold text-[#e5a852] bg-primary-50 px-4 py-2 rounded-lg hover:bg-primary-100 transition-colors"
+                                >
+                                    {showProductDetails ? "Hide" : "View"}
+                                </button>
                             </div>
 
-                            <div className="bg-white px-8 pb-8 pt-6 space-y-4">
-                                {[
-                                    { label: "Fabric", value: "Silk Blend" },
-                                    { label: "Pattern", value: "Printed" },
-                                    { label: "Fit", value: "Regular Fit" },
-                                    { label: "Neckline", value: "Round Neck" },
-                                    { label: "SKU", value: `7F-DW-2026-${product.id}` },
-                                    { label: "Origin", value: "India" },
-                                ].map((item, i) => (
-                                    <div key={i} className="flex justify-between items-center py-2 border-b border-gray-50 last:border-0 hover:bg-gray-50/50 rounded-lg px-3 transition-colors">
-                                        <span className="text-sm font-medium text-gray-500">{item.label}</span>
-                                        <span className="text-sm font-bold text-gray-800">{item.value}</span>
-                                    </div>
-                                ))}
-                            </div>
+                            <AnimatePresence>
+                                {showProductDetails && (
+                                    <motion.div
+                                        initial={{ height: 0, opacity: 0 }}
+                                        animate={{ height: 'auto', opacity: 1 }}
+                                        exit={{ height: 0, opacity: 0 }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="bg-white px-8 pb-8 pt-6 space-y-4">
+                                            {[
+                                                { label: "Fabric", value: "Silk Blend" },
+                                                { label: "Pattern", value: "Printed" },
+                                                { label: "Fit", value: "Regular Fit" },
+                                                { label: "Neckline", value: "Round Neck" },
+                                                { label: "SKU", value: `7F-DW-2026-${product.id}` },
+                                                { label: "Origin", value: "India" },
+                                            ].map((item, i) => (
+                                                <div key={i} className="flex justify-between items-center py-2 border-b border-gray-50 last:border-0 hover:bg-gray-50/50 rounded-lg px-3 transition-colors">
+                                                    <span className="text-sm font-medium text-gray-500">{item.label}</span>
+                                                    <span className="text-sm font-bold text-gray-800">{item.value}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     </div>
                 </div>
@@ -419,6 +442,7 @@ const ProductDetails = () => {
 
             </div>
         </div>
+        
     );
 };
 

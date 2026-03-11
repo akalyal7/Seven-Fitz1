@@ -88,7 +88,7 @@ const Checkout = () => {
     try {
       if (isEditing && selectedAddress) {
         // Edit logic is left basic for now as the prompt primarily focuses on adding/syncing.
-        const updatedAddress = { ...address, userEmail: user.email };
+        const updatedAddress = { ...address, userEmail: user?.email || "" };
         const res = await fetch(`http://localhost:3000/addresses/${selectedAddress.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -102,7 +102,7 @@ const Checkout = () => {
           setSavedAddresses(updated);
         }
       } else {
-        const newAddress = { ...address, userEmail: user.email };
+        const newAddress = { ...address, userEmail: user?.email || "" };
         const res = await fetch("http://localhost:3000/addresses", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -268,11 +268,17 @@ const Checkout = () => {
 
               <button
                 onClick={() => {
-                  setIsAddressListOpen(true);
+                  if (savedAddresses.length === 0) {
+                    setIsEditing(false);
+                    setAddress(emptyAddress);
+                    setIsAddressOpen(true);
+                  } else {
+                    setIsAddressListOpen(true);
+                  }
                 }}
                 className="text-sm font-bold text-[#e5a852] hover:text-black uppercase tracking-widest transition-colors py-1 px-3 border border-transparent hover:border-black rounded-full"
               >
-                Change
+                {savedAddresses.length === 0 ? "Add Address" : "Change"}
               </button>
             </div>
 
@@ -353,13 +359,13 @@ const Checkout = () => {
                     <div className="flex justify-end gap-4 mt-8 pt-4 border-t border-secondary-100">
                       <button
                         onClick={() => setIsAddressListOpen(false)}
-                        className="px-6 py-2.5 text-sm font-bold text-secondary-500 hover:text-black transition-colors"
+                        className="px-6 py-2.5 text-sm font-bold text-black hover:text-black transition-colors border border-[#e5a852] rounded-lg hover:bg-[#e5a852]" 
                       >
                         Cancel
                       </button>
                       <button
                         onClick={() => setIsAddressListOpen(false)}
-                        className="px-8 py-2.5 bg-black text-[#e5a852] rounded-full font-bold shadow-lg hover:bg-[#e5a852] hover:text-black transition-all"
+                        className="px-8 py-2.5 bg-black text-[#e5a852] rounded-lg font-bold shadow-lg hover:bg-[#e5a852] hover:text-black transition-all"
                       >
                         Confirm
                       </button>
@@ -373,7 +379,7 @@ const Checkout = () => {
             <AnimatePresence>
               {isAddressOpen && (
                 <div
-                  className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-[60]"
+                  className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-60"
                   onClick={() => setIsAddressOpen(false)}
                 >
                   <motion.div
@@ -451,19 +457,19 @@ const Checkout = () => {
                           className="w-4 h-4 accent-[#e5a852] rounded"
                         />
                         <span className="text-sm font-medium text-slate-700">Set as default address</span>
-                      </label>
+                      </label>  
                     </div>
 
                     <div className="flex justify-end gap-4 mt-8">
                       <button
                         onClick={() => setIsAddressOpen(false)}
-                        className="px-6 py-2.5 text-sm font-bold text-secondary-500 hover:text-black transition-colors"
+                        className="px-6 py-2.5 text-sm font-bold text-black hover:text-black transition-colors rounded-lg  border border-[#e5a852] hover:bg-[#e5a852]"
                       >
                         Cancel
                       </button>
                       <button
                         onClick={saveAddress}
-                        className="px-8 py-2.5 bg-black text-[#e5a852] rounded-full font-bold shadow-lg hover:bg-[#e5a852] hover:text-black transition-all"
+                        className="px-8 py-2.5 bg-black text-[#e5a852] rounded-lg font-bold shadow-lg hover:bg-[#e5a852] hover:text-black transition-all"
                       >
                         Save Address
                       </button>

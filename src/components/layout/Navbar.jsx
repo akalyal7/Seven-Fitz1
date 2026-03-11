@@ -33,7 +33,7 @@ const Navbar = () => {
   const handleLogout = () => {
     logout();
     setIsProfileOpen(false);
-    navigate("/");
+    window.location.href = "/";
   };
 
   // Scroll effect
@@ -46,7 +46,10 @@ const Navbar = () => {
       }
 
       // Auto close search on scroll
-      setIsSearchOpen(false);
+      setIsSearchOpen((prev) => {
+        if (prev) return false;
+        return prev;
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -71,11 +74,10 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/80 backdrop-blur-md border-b border-gray-800"
-          : "bg-black"
-      } px-4 md:px-30`}
+      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-black/80 backdrop-blur-md border-b border-gray-800"
+        : "bg-black"
+        } px-4 md:px-30`}
     >
       <motion.div
         className="flex items-center justify-between"
@@ -88,9 +90,8 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Logo"
-            className={`w-auto object-contain transition-all duration-300 ${
-              scrolled ? "h-12 md:h-14 py-2" : "h-14 md:h-20 py-4"
-            }`}
+            className={`w-auto object-contain transition-all duration-300 ${scrolled ? "h-12 md:h-14 py-2" : "h-14 md:h-20 py-4"
+              }`}
           />
         </Link>
 

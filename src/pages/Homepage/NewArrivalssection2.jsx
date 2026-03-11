@@ -41,7 +41,7 @@ const CategoryPage = () => {
 
   return (
     <section className="min-h-screen py-20 bg-white overflow-hidden">
-      <div className="container mx-auto px-22 relative">
+      <div className="container mx-auto px-6 md:px-22 relative">
 
         {/* Heading */}
         <div className="text-center mb-16">
@@ -51,6 +51,7 @@ const CategoryPage = () => {
           <p className="text-gray-500 mt-4 text-lg">
             Explore all our new collections
           </p>
+          <div className="w-20 h-0.75 bg-linear-to-r from-yellow-400 via-[#e5a852] to-yellow-700 mx-auto rounded-full mt-4" />
         </div>
 
         <div className="relative">
@@ -59,7 +60,7 @@ const CategoryPage = () => {
           <button
             onClick={prevSlide}
             disabled={index === 0}
-            className={`absolute -left-10 top-1/2 -translate-y-1/2 z-20 
+            className={`absolute -left-2 md:-left-10 top-1/2 -translate-y-1/2 z-20 
               bg-white shadow-xl rounded-full p-3 transition 
               ${index === 0
                 ? "opacity-40 cursor-not-allowed"
@@ -103,7 +104,7 @@ const CategoryPage = () => {
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-500" /> */}
 
                     <div className="absolute bottom-8 left-8">
-                      <h3 className="text-2xl font-serif font-semibold text-white">
+                      <h3 className="text-lg font-serif font-semibold text-[#e5a852] bg-black/80 backdrop-blur-sm px-4 rounded-2xl border border-[#e5a852] ">
                         {category.name}
                       </h3>
                     </div>
@@ -117,7 +118,7 @@ const CategoryPage = () => {
           <button
             onClick={nextSlide}
             disabled={index === maxIndex}
-            className={`absolute -right-10 top-1/2 -translate-y-1/2 z-20 
+            className={`absolute -right-2 md:-right-10 top-1/2 -translate-y-1/2 z-20 
               bg-white shadow-xl rounded-full p-3 transition 
               ${index === maxIndex
                 ? "opacity-40 cursor-not-allowed"

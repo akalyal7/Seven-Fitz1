@@ -24,6 +24,7 @@ const ResetPassword = lazy(() => import('./pages/Userprofile/ResetPassword'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Returns = lazy(() => import('./pages/Returns'));
+const TermsAndConditions = lazy(() => import('./pages/Termsandconditions'));
 
 const LoadingFallback = () => (
   <div className="flex items-center justify-center min-h-[60vh]">
@@ -58,6 +59,7 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/returns" element={<Returns />} />
+                    <Route path="/Termsandconditions" element={<TermsAndConditions />} />
                     <Route path="*" element={<div className="container mx-auto px-4 py-20 text-center text-2xl font-serif">404 - Page Not Found</div>} />
                   </Routes>
                 </Suspense>

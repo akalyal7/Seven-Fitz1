@@ -51,48 +51,47 @@ const ProductCard = ({ product }) => {
                 </div>
 
                 {/* Actions */}
-                <div className="absolute bottom-3 left-3 right-3 flex gap-2 translate-y-0 opacity-100 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out z-20">
+                <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 flex gap-1.5 sm:gap-2 translate-y-0 opacity-100 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-300 ease-out z-20">
                     <button
                         onClick={handleAddToCart}
-                        className="flex-1 bg-black backdrop-blur-md text-[#e5a852] py-2.5 lg:py-3 text-[10px] sm:text-xs font-semibold uppercase tracking-widest hover:bg-[#e5a852] hover:text-black transition-colors duration-300 rounded-lg flex items-center justify-center gap-1.5 sm:gap-2 shadow-sm"
+                        className="flex-1 bg-black backdrop-blur-md text-[#e5a852] py-2 lg:py-3 text-[9px] sm:text-[10px] md:text-xs font-semibold uppercase tracking-widest hover:bg-[#e5a852] hover:text-black transition-colors duration-300 rounded-lg flex items-center justify-center gap-1 sm:gap-1.5 shadow-sm px-1 sm:px-2"
                     >
-                        <ShoppingBag size={14} className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                        Add to Bag
+                        <ShoppingBag className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />
+                        <span className="leading-none text-center">Add<span className="hidden xs:inline"> to Bag</span></span>
                     </button>
                     <button
                         onClick={handleWishlist}
-                        className="bg-white/95 backdrop-blur-md text-secondary-900 p-2.5 lg:p-3 hover:bg-secondary-900 hover:text-white transition-colors duration-300 rounded-lg shadow-sm flex items-center justify-center group/btn"
+                        className="bg-white/95 backdrop-blur-md text-secondary-900 p-2 sm:p-2.5 lg:p-3 hover:bg-secondary-900 hover:text-white transition-colors duration-300 rounded-lg shadow-sm flex items-center justify-center group/btn shrink-0"
                     >
                         <Heart
-                            size={16}
+                            className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-colors ${isInWishlist(product.id) ? "text-[#e5a852]" : "text-secondary-900 group-hover/btn:text-white"}`}
                             fill={isInWishlist(product.id) ? "currentColor" : "none"}
-                            className={`transition-colors ${isInWishlist(product.id) ? "text-[#e5a852]" : "text-secondary-900 group-hover/btn:text-white"}`}
                         />
                     </button>
                 </div>
             </Link>
 
             {/* Product Meta */}
-            <div className="flex flex-col gap-1.5 px-1">
-                <div className="flex justify-between items-start gap-2">
+            <div className="flex flex-col gap-1 sm:gap-1.5 px-1 py-1 sm:py-0">
+                <div className="flex justify-between items-start gap-1 sm:gap-2">
                     <Link to={`/product/${product.id}`} className="flex-1 min-w-0">
-                        <h3 className="text-lg font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors truncate">
+                        <h3 className="text-[13px] sm:text-base md:text-lg font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors truncate">
                             {product.name}
                         </h3>
                     </Link>
                     <div className="flex flex-col items-end shrink-0">
-                        <span className="text-lg font-semibold text-secondary-900">
+                        <span className="text-[13px] sm:text-base md:text-lg font-semibold text-secondary-900">
                             ₹{product.price}
                         </span>
                     </div>
                 </div>
 
                 <div className="flex justify-between items-center">
-                    <span className="text-sm text-secondary-500 capitalize tracking-wide">
+                    <span className="text-[11px] sm:text-sm text-secondary-500 capitalize tracking-wide">
                         {product.category}
                     </span>
                     {product.oldPrice && (
-                        <span className="text-xs text-secondary-400 line-through">
+                        <span className="text-[10px] sm:text-xs text-secondary-400 line-through">
                             ₹{product.oldPrice}
                         </span>
                     )}

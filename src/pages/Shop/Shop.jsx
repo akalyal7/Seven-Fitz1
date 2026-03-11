@@ -60,7 +60,7 @@ const Shop = () => {
 
       const matchesSearch = urlSearch
         ? product.name.toLowerCase().includes(searchLower) ||
-          product.category?.toLowerCase().includes(searchLower)
+        product.category?.toLowerCase().includes(searchLower)
         : true;
 
       const matchesCategory =
@@ -92,7 +92,7 @@ const Shop = () => {
   };
 
   return (
-    <div className="relative min-h-screen pt-10 md:pt-12 pb-20 md:pb-28 bg-slate-50/50 overflow-hidden">
+    <div className="relative min-h-screen pt-8 sm:pt-10 md:pt-12 pb-16 sm:pb-20 md:pb-28 bg-slate-50/50 overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute top-0 right-0 w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] bg-[#e5a852]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -100,27 +100,27 @@ const Shop = () => {
       <div className="container-custom relative z-10">
 
         {/* HEADER */}
-        <header className="mb-10 md:mb-16">
+        <header className="mb-6 sm:mb-10 md:mb-16">
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] mb-4 md:mb-6 text-black"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] mb-2 sm:mb-4 md:mb-6 text-black"
           >
             Our <span className="text-[#e5a852]">Luxury</span> Collection
           </motion.h1>
 
-          <p className="text-secondary-600 text-sm md:text-base mb-8 md:mb-10 max-w-xl leading-relaxed">
+          <p className="text-secondary-600 text-xs sm:text-sm md:text-base mb-6 sm:mb-8 md:mb-10 max-w-xl leading-relaxed">
             Discover refined silhouettes and handcrafted details curated for
             every special moment.
           </p>
 
           {/* CATEGORY TABS */}
-          <div className="flex items-center gap-6 border-b border-gray-200 pb-3 overflow-x-auto hide-scrollbar">
+          <div className="flex items-center gap-3 sm:gap-6 border-b border-gray-200 pb-3 overflow-x-auto hide-scrollbar">
 
-            <div className="flex items-center gap-2 text-gray-500 shrink-0">
-              <SlidersHorizontal size={16} />
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-gray-500 shrink-0">
+              <SlidersHorizontal className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em]">
                 Category
               </span>
             </div>
@@ -135,11 +135,10 @@ const Shop = () => {
                   setCurrentPage(1);
                   if (urlSearch) setSearchParams({});
                 }}
-                className={`relative shrink-0 px-4 md:px-6 py-2 text-[11px] md:text-[12px] font-semibold tracking-[0.15em] transition ${
-                  selectedCategory === cat
-                    ? "text-black"
-                    : "text-gray-400 hover:text-black"
-                }`}
+                className={`relative shrink-0 px-3 sm:px-4 md:px-6 py-2 text-[10px] sm:text-[11px] md:text-[12px] font-semibold tracking-[0.15em] transition ${selectedCategory === cat
+                  ? "text-black"
+                  : "text-gray-400 hover:text-black"
+                  }`}
               >
                 {cat}
 
@@ -156,12 +155,12 @@ const Shop = () => {
           {/* SUBCATEGORY CHIPS */}
           {selectedCategory !== "ALL" && subcategoriesList.length > 1 && (
             <>
-              <div className="h-px bg-gray-200 my-5"></div>
+              <div className="h-px bg-gray-200 my-4 sm:my-5"></div>
 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="flex flex-wrap gap-3"
+                className="flex flex-wrap gap-2 sm:gap-3"
               >
                 {subcategoriesList.map((subcat) => (
                   <motion.button
@@ -171,11 +170,10 @@ const Shop = () => {
                       setSelectedSubcategory(subcat);
                       setCurrentPage(1);
                     }}
-                    className={`px-4 py-1.5 rounded-lg text-[11px] font-medium transition ${
-                      selectedSubcategory === subcat
-                        ? "bg-[#e5a852]/10 text-[#e5a852] border border-[#e5a852]"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
+                    className={`px-3 sm:px-4 py-1.5 rounded-lg text-[10px] sm:text-[11px] font-medium transition ${selectedSubcategory === subcat
+                      ? "bg-[#e5a852]/10 text-[#e5a852] border border-[#e5a852]"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      }`}
                   >
                     {subcat}
                   </motion.button>
@@ -190,7 +188,7 @@ const Shop = () => {
         <main>
 
           {isPageLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 lg:gap-y-12">
               {[...Array(6)].map((_, i) => (
                 <ProductSkeleton key={i} />
               ))}
@@ -201,12 +199,12 @@ const Shop = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-8 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 lg:gap-y-12"
             >
               {paginatedProducts.map((product) => (
                 <motion.div
                   key={product.id}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                 >
                   <ProductCard product={product} />
@@ -251,11 +249,10 @@ const Shop = () => {
                   <button
                     key={i}
                     onClick={() => setCurrentPage(i + 1)}
-                    className={`w-12 h-12 rounded-full text-[11px] font-bold ${
-                      currentPage === i + 1
-                        ? "bg-black text-[#e5a852]"
-                        : "text-gray-500 hover:text-black"
-                    }`}
+                    className={`w-12 h-12 rounded-full text-[11px] font-bold ${currentPage === i + 1
+                      ? "bg-black text-[#e5a852]"
+                      : "text-gray-500 hover:text-black"
+                      }`}
                   >
                     {i + 1}
                   </button>

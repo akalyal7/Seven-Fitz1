@@ -39,9 +39,7 @@ const FeaturedProducts = () => {
 
           <div className="w-20 h-0.75 bg-linear-to-r from-yellow-400 via-[#e5a852] to-yellow-700 mx-auto rounded-full" />
 
-          <p className="text-gray-500 mt-5 max-w-xl mx-auto">
-            Discover our carefully curated pieces crafted for elegance and confidence.
-          </p>
+         
         </motion.div>
 
         {/* Products Grid */}

@@ -673,6 +673,2442 @@
         "city": "New York",
         "zip": "10001"
       }
+    },
+    {
+      "id": "ORD-8986",
+      "userEmail": "",
+      "date": "Mar 08, 2026",
+      "total": 111.66,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "f2ad",
+        "type": "Work",
+        "name": "Akalya",
+        "phone": "1234567890",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "ubhb",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": ""
+      }
+    },
+    {
+      "id": "ORD-6024",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 436.30920000000003,
+      "status": "Ordered",
+      "items": 3,
+      "image": "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+      "cartItems": [
+        {
+          "id": "3",
+          "name": "High-Waist Cotton Cargo Pants",
+          "price": 64,
+          "category": "Office Wear",
+          "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
+          "images": [
+            "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1669194721830-b5b9f794f08d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.2,
+          "reviews": 56,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Trousers",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "5",
+          "name": "Satin Evening Gown",
+          "price": 210,
+          "category": "Saree",
+          "description": "Elegant satin evening gown with a cowl neck and side slit. Perfect for formal events.",
+          "images": [
+            "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 5,
+          "reviews": 45,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Party",
+          "quantity": 1,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "0589",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "ubhb",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-8778",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 165.78,
+      "status": "Ordered",
+      "items": 2,
+      "image": "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "S"
+        },
+        {
+          "id": "3",
+          "name": "High-Waist Cotton Cargo Pants",
+          "price": 64,
+          "category": "Office Wear",
+          "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
+          "images": [
+            "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1669194721830-b5b9f794f08d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.2,
+          "reviews": 56,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Trousers",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-9324",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 561.5568000000001,
+      "status": "Ordered",
+      "items": 4,
+      "image": "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 4,
+          "selectedSize": "XS",
+          "selectedColor": "Navy"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-1394",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 421.16760000000005,
+      "status": "Ordered",
+      "items": 3,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 3,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-5057",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-9757",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-4755",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-3161",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-3551",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 647.9676000000001,
+      "status": "Ordered",
+      "items": 4,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 3,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "5",
+          "name": "Satin Evening Gown",
+          "price": 210,
+          "category": "Saree",
+          "description": "Elegant satin evening gown with a cowl neck and side slit. Perfect for formal events.",
+          "images": [
+            "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 5,
+          "reviews": 45,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Party",
+          "quantity": 1,
+          "selectedSize": "XS"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-3594",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 84.12,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+      "cartItems": [
+        {
+          "id": "3",
+          "name": "High-Waist Cotton Cargo Pants",
+          "price": 64,
+          "category": "Office Wear",
+          "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
+          "images": [
+            "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1669194721830-b5b9f794f08d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.2,
+          "reviews": 56,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Trousers",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-5644",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-6762",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "M",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-8464",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 386.64,
+      "status": "Ordered",
+      "items": 4,
+      "image": "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 4,
+          "selectedSize": "S"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-4511",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 280.77840000000003,
+      "status": "Ordered",
+      "items": 2,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        },
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "0589",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "ubhb",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-4470",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 09, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
+    },
+    {
+      "id": "ORD-8054",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-6280",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 1678.806,
+      "status": "Ordered",
+      "items": 10,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 5,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "S"
+        },
+        {
+          "id": "5",
+          "name": "Satin Evening Gown",
+          "price": 210,
+          "category": "Saree",
+          "description": "Elegant satin evening gown with a cowl neck and side slit. Perfect for formal events.",
+          "images": [
+            "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693989243820-d083cf74ca8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 5,
+          "reviews": 45,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Party",
+          "quantity": 3,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "6",
+          "name": "Oversized Wool Coat",
+          "price": 185,
+          "category": "Half-Saree",
+          "description": "Cozy oversized wool coat with large lapels and deep pockets. Ideal for winter layering.",
+          "images": [
+            "https://images.unsplash.com/photo-1693987642090-f56a23bff32b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693987646568-22fd78a35d26?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.7,
+          "reviews": 89,
+          "isNew": false,
+          "isFeatured": false,
+          "subcategory": "Contemporary",
+          "quantity": 1,
+          "selectedSize": "S"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-7535",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-8339",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 84.12,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "3",
+          "name": "High-Waist Cotton Cargo Pants",
+          "price": 64,
+          "category": "Office Wear",
+          "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
+          "images": [
+            "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.2,
+          "reviews": 56,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Trousers",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-9307",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 111.66,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "S"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-2309",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-5494",
+      "userEmail": "aka@d.d",
+      "date": "Mar 10, 2026",
+      "total": 224.62920000000003,
+      "status": "Ordered",
+      "items": 2,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        },
+        {
+          "id": "12",
+          "name": "Ribbed Knit Cardigan",
+          "price": 78,
+          "category": "Kurti",
+          "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990149357-17819afee45b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI2fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693990150852-0f085f0ba97e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI3fHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.6,
+          "reviews": 112,
+          "isNew": false,
+          "isFeatured": false,
+          "subcategory": "Straight",
+          "quantity": 1,
+          "selectedSize": "S",
+          "selectedColor": "Default"
+        }
+      ],
+      "address": {
+        "id": "949a",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": "aka@d.d"
+      }
+    },
+    {
+      "id": "ORD-1731",
+      "userEmail": "",
+      "date": "Mar 10, 2026",
+      "total": 549.18,
+      "status": "Ordered",
+      "items": 5,
+      "image": "https://images.unsplash.com/photo-1693987642090-f56a23bff32b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8",
+      "cartItems": [
+        {
+          "id": "6",
+          "name": "Oversized Wool Coat",
+          "price": 185,
+          "category": "Half-Saree",
+          "description": "Cozy oversized wool coat with large lapels and deep pockets. Ideal for winter layering.",
+          "images": [
+            "https://images.unsplash.com/photo-1693987642090-f56a23bff32b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693987646568-22fd78a35d26?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.7,
+          "reviews": 89,
+          "isNew": false,
+          "isFeatured": false,
+          "subcategory": "Contemporary",
+          "quantity": 1,
+          "selectedSize": "S"
+        },
+        {
+          "id": "7",
+          "name": "Pleated Midi Skirt",
+          "price": 55,
+          "category": "Office Wear",
+          "description": "Flowy pleated midi skirt with an elastic waistband. Versatile for both work and weekend.",
+          "images": [
+            "https://images.unsplash.com/photo-1693988100120-b75e4cba7af3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693988100123-6e08d48ca4f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.4,
+          "reviews": 67,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Skirts",
+          "quantity": 1,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 3,
+          "selectedSize": "S"
+        }
+      ],
+      "address": {
+        "id": "2cf4",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "ubhb",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": ""
+      }
+    },
+    {
+      "id": "ORD-3806",
+      "userEmail": "",
+      "date": "Mar 10, 2026",
+      "total": 224.62920000000003,
+      "status": "Ordered",
+      "items": 2,
+      "image": "https://images.unsplash.com/photo-1669199816632-2aeb9aa81d4c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "9",
+          "name": "Ribbed Knit Cardigan",
+          "price": 78,
+          "category": "Kurti",
+          "description": "Soft ribbed knit cardigan with button-front closure. A seasonal layering staple.",
+          "images": [
+            "https://images.unsplash.com/photo-1669199816632-2aeb9aa81d4c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1669201160936-a9ec73d9b4ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.6,
+          "reviews": 112,
+          "isNew": false,
+          "isFeatured": false,
+          "subcategory": "Straight",
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Default"
+        },
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "cb81",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": ""
+      }
+    },
+    {
+      "id": "ORD-3220",
+      "userEmail": "",
+      "date": "Mar 10, 2026",
+      "total": 155.38920000000002,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+      "cartItems": [
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "",
+          "selectedColor": "Red"
+        }
+      ],
+      "address": {
+        "id": "3d79",
+        "type": "Work",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": false,
+        "userEmail": ""
+      }
+    },
+    {
+      "id": "ORD-8855",
+      "userEmail": "",
+      "date": "Mar 10, 2026",
+      "total": 306.1692,
+      "status": "Ordered",
+      "items": 3,
+      "image": "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "S"
+        },
+        {
+          "id": "3",
+          "name": "High-Waist Cotton Cargo Pants",
+          "price": 64,
+          "category": "Office Wear",
+          "description": "Comfortable cotton cargo pants with multiple pockets and a high-rise waist for a modern utility look.",
+          "images": [
+            "https://images.unsplash.com/photo-1669194721813-b9fc575cee97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1669194721830-b5b9f794f08d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.2,
+          "reviews": 56,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Trousers",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS"
+        },
+        {
+          "id": "1",
+          "name": "Classic Silk Wrap Dress",
+          "price": 129.99,
+          "category": "Saree",
+          "description": "A timeless wrap dress crafted from premium silk, featuring a delicate floral print and a flattering tie-waist.",
+          "images": [
+            "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDMzfHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI5fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.8,
+          "reviews": 124,
+          "isNew": true,
+          "isFeatured": true,
+          "subcategory": "Silk",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "XS"
+        }
+      ],
+      "address": {
+        "id": "2345",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "123",
+        "isDefault": false,
+        "userEmail": ""
+      }
+    },
+    {
+      "id": "ORD-1002",
+      "userEmail": "",
+      "date": "Mar 10, 2026",
+      "total": 253.26,
+      "status": "Ordered",
+      "items": 2,
+      "image": "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "2",
+          "name": "Linen Tailored Blazer",
+          "price": 89.5,
+          "category": "Half-Saree",
+          "description": "Breathable linen blazer with a relaxed yet tailored fit, perfect for summer office wear or casual outings.",
+          "images": [
+            "https://images.unsplash.com/photo-1678536514513-a0540f37693e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1678536514772-9febabd241fd?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Traditional",
+          "variants": [
+            {
+              "color": "Red",
+              "colorCode": "#DC2626",
+              "images": [
+                "https://images.unsplash.com/photo-1693991024716-3debf9ef9bd2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991026260-f3f94b000a41?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+                "https://images.unsplash.com/photo-1693991024957-da77c8a66afe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
+              ]
+            },
+            {
+              "color": "Navy",
+              "colorCode": "#1E3A8A",
+              "images": [
+                "https://images.unsplash.com/photo-1693990155907-a24ba5a85d33?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693990148290-6e7a7e85dc63?w=600&auto=format&fit=crop&q=60",
+                "https://images.unsplash.com/photo-1693987648230-1c6bc9f86067?w=600&auto=format&fit=crop&q=60"
+              ]
+            }
+          ],
+          "quantity": 1,
+          "selectedSize": "S"
+        },
+        {
+          "id": "4",
+          "name": "Cashmere Turtleneck Sweater",
+          "price": 145,
+          "category": "Kurti",
+          "description": "Ultra-soft cashmere sweater featuring a cozy turtleneck and ribbed cuffs. A luxury essential for cold days.",
+          "images": [
+            "https://images.unsplash.com/photo-1669199207455-dcb9ebb242f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDc5fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1669199205117-85651692fba3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDc4fHx8ZW58MHx8fHx8"
+          ],
+          "sizes": [
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.9,
+          "reviews": 210,
+          "isNew": false,
+          "isFeatured": true,
+          "subcategory": "Anarkali",
+          "quantity": 1,
+          "selectedSize": "S"
+        }
+      ],
+      "address": {
+        "id": "17f1",
+        "type": "Home",
+        "name": "Akalya",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415 ",
+        "isDefault": false,
+        "userEmail": ""
+      }
+    },
+    {
+      "id": "ORD-3007",
+      "userEmail": "a@gmail.com",
+      "date": "Mar 10, 2026",
+      "total": 74.4,
+      "status": "Ordered",
+      "items": 1,
+      "image": "https://images.unsplash.com/photo-1693988100120-b75e4cba7af3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "cartItems": [
+        {
+          "id": "7",
+          "name": "Pleated Midi Skirt",
+          "price": 55,
+          "category": "Office Wear",
+          "description": "Flowy pleated midi skirt with an elastic waistband. Versatile for both work and weekend.",
+          "images": [
+            "https://images.unsplash.com/photo-1693988100120-b75e4cba7af3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+            "https://images.unsplash.com/photo-1693988100123-6e08d48ca4f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+          ],
+          "rating": 4.4,
+          "reviews": 67,
+          "isNew": true,
+          "isFeatured": false,
+          "subcategory": "Skirts",
+          "quantity": 1,
+          "selectedSize": "XS"
+        }
+      ],
+      "address": {
+        "id": "2548",
+        "type": "Work",
+        "name": "Abi",
+        "phone": "8765432000",
+        "address": "59 Station Rd, Purls Bridge, United Kingdom",
+        "city": "aaaa",
+        "zip": "211415",
+        "isDefault": true,
+        "userEmail": "a@gmail.com"
+      }
     }
   ],
   "addresses": [
@@ -686,6 +3122,237 @@
       "zip": "211415",
       "isDefault": false,
       "userEmail": "akalya@gmail.com"
+    },
+    {
+      "id": "013e",
+      "type": "Home",
+      "name": "Gold Necklace - Demo",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "123",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "f2ad",
+      "type": "Work",
+      "name": "Akalya",
+      "phone": "1234567890",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "ubhb",
+      "zip": "211415",
+      "isDefault": true,
+      "userEmail": ""
+    },
+    {
+      "id": "46c2",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "ubhb",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "0589",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "ubhb",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": "a@gmail.com"
+    },
+    {
+      "id": "2548",
+      "type": "Work",
+      "name": "Abi",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": true,
+      "userEmail": "a@gmail.com"
+    },
+    {
+      "id": "949a",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": "aka@d.d"
+    },
+    {
+      "id": "8c66",
+      "type": "Home",
+      "name": "Abi",
+      "phone": "1234567890",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": "aka@d.d"
+    },
+    {
+      "id": "d5d6",
+      "type": "Other",
+      "name": "annie",
+      "phone": "360-943-7332",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "0c60",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "ubhb",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "2cf4",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "ubhb",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "3d82",
+      "type": "Home",
+      "name": "Abi",
+      "phone": "1234567890",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "123",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "3085",
+      "type": "Home",
+      "name": "Annie",
+      "phone": "360-943-7332",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": true,
+      "userEmail": ""
+    },
+    {
+      "id": "efb3",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "1234567890",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "123",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "cb81",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": true,
+      "userEmail": ""
+    },
+    {
+      "id": "3d79",
+      "type": "Work",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "2345",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "123",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "f93d",
+      "type": "Home",
+      "name": "Annie",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "7530",
+      "type": "Home",
+      "name": "Annie",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": false,
+      "userEmail": ""
+    },
+    {
+      "id": "1e05",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": true,
+      "userEmail": ""
+    },
+    {
+      "id": "8903",
+      "type": "Work",
+      "name": "Abi",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415",
+      "isDefault": true,
+      "userEmail": ""
+    },
+    {
+      "id": "17f1",
+      "type": "Home",
+      "name": "Akalya",
+      "phone": "8765432000",
+      "address": "59 Station Rd, Purls Bridge, United Kingdom",
+      "city": "aaaa",
+      "zip": "211415 ",
+      "isDefault": false,
+      "userEmail": ""
     }
   ]
 }

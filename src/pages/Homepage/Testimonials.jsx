@@ -86,9 +86,7 @@ const Testimonials = () => {
 
           <div className="w-20 h-0.75 bg-linear-to-r from-yellow-400 via-[#e5a852] to-yellow-700 mx-auto rounded-full" />
 
-          <p className="text-gray-500 mt-5 max-w-xl mx-auto">
-            Discover why our customers love our carefully curated pieces.
-          </p>
+
         </motion.div>
 
         <Slider {...settings}>
@@ -97,36 +95,38 @@ const Testimonials = () => {
             const isLongText = item.text.length > 140;
 
             return (
-              <div key={item.id} className="px-4 h-full">
-                <div className="relative h-70 rounded-2xl overflow-hidden">
+              <div key={item.id} className="px-3 md:px-4 h-full">
+                <div className="relative h-64 md:h-70 rounded-2xl overflow-hidden mt-6 mb-6">
 
                   {/* Gold Shadow Layer */}
-                  <div className="absolute top-6 left-6 w-full h-full bg-linear-to-r from-yellow-300 via-[#e5a852] to-yellow-700 rounded-2xl"></div>
+                  <div className="absolute top-3 left-3 md:top-6 md:left-6 w-[calc(100%-12px)] md:w-[calc(100%-24px)] h-[calc(100%-12px)] md:h-[calc(100%-24px)] bg-linear-to-r from-yellow-300 via-[#e5a852] to-yellow-700 rounded-2xl"></div>
 
                   {/* Main Card */}
-                  <div className="relative bg-black border border-yellow-600/30 rounded-2xl p-8 shadow-xl h-65 flex flex-col justify-between">
+                  <div className="relative bg-black border border-yellow-600/30 rounded-2xl p-5 md:p-8 shadow-xl h-60 md:h-65 flex flex-col justify-between z-10 mr-3 mb-3 md:mr-6 md:mb-6">
 
                     {/* Top Content */}
-                    <div>
+                    <div className="flex flex-col flex-1 overflow-hidden">
                       {/* Stars */}
-                      <div className="flex gap-1 text-yellow-400 mb-4">
+                      <div className="flex gap-1 text-yellow-400 mb-2 shrink-0">
                         {[...Array(5)].map((_, i) => (
                           <FaStar key={i} />
                         ))}
                       </div>
 
                       {/* Text */}
-                      <p className="text-gray-300 leading-relaxed mb-2 text-sm">
-                        {isExpanded
-                          ? item.text
-                          : item.text.slice(0, 140) +
+                      <div className="overflow-y-auto hide-scrollbar flex-1 mb-2">
+                        <p className="text-gray-300 leading-relaxed text-sm">
+                          {isExpanded
+                            ? item.text
+                            : item.text.slice(0, 140) +
                             (isLongText ? "..." : "")}
-                      </p>
+                        </p>
+                      </div>
 
                       {isLongText && (
                         <button
                           onClick={() => toggleExpand(item.id)}
-                          className="text-yellow-500 text-xs font-semibold hover:underline"
+                          className="text-yellow-500 text-xs font-semibold hover:underline self-start shrink-0"
                         >
                           {isExpanded ? "Show Less" : "Read More"}
                         </button>
@@ -134,7 +134,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* Profile */}
-                    <div className="flex items-center gap-4 mt-auto">
+                    <div className="flex items-center gap-4 shrink-0 mt-auto">
                       <img
                         src={item.img}
                         alt={item.name}
@@ -172,6 +172,13 @@ const Testimonials = () => {
           .slick-dots li.slick-active button:before {
             opacity: 1;
             color: #e5a852;
+          }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
           }
         `}
       </style>

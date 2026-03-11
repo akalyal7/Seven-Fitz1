@@ -3,7 +3,6 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Lock, Eye, EyeOff } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import { resetPasswordApi } from "../../networking/LoginAction";
 import loginbackground from "../../assets/Images/loginbackground.jpg";
 import Slider from "react-slick";
 import { FaStar } from "react-icons/fa";
@@ -53,55 +52,46 @@ const ResetPassword = () => {
 
     setIsLoading(true);
 
-    resetPasswordApi({
-      email,
-      newPassword: formData.newPassword,
-      confirmPassword: formData.confirmPassword,
-    })
-      .then((res) => {
-        if (res.data.success) {
-          toast.success(res.data.message);
-          navigate("/login");
-        } else {
-          toast.error(res.data.message);
-        }
-      })
-      .catch(() => toast.warn("Something went wrong"))
-      .finally(() => setIsLoading(false));
+    // Simulated success (no API call)
+    setTimeout(() => {
+      toast.success("Password reset successfully");
+      navigate("/login");
+      setIsLoading(false);
+    }, 1000);
   };
-  
-const reviewData = [
-  {
-    id: 1,
-    name: "Priya S.",
-    text: "This dress made me feel like royalty. Pure elegance!",
-    img: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    id: 2,
-    name: "Ayesha K.",
-    text: "Premium quality and stunning design. Worth every rupee!",
-    img: "https://randomuser.me/api/portraits/women/68.jpg",
-  },
-  {
-    id: 3,
-    name: "Neha R.",
-    text: "I got so many compliments. This brand is luxury!",
-    img: "https://randomuser.me/api/portraits/women/12.jpg",
-  },
-];
 
-const settings = {
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 600,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3500,
-  pauseOnHover: true,
-};
+  const reviewData = [
+    {
+      id: 1,
+      name: "Priya S.",
+      text: "This dress made me feel like royalty. Pure elegance!",
+      img: "https://randomuser.me/api/portraits/women/44.jpg",
+    },
+    {
+      id: 2,
+      name: "Ayesha K.",
+      text: "Premium quality and stunning design. Worth every rupee!",
+      img: "https://randomuser.me/api/portraits/women/68.jpg",
+    },
+    {
+      id: 3,
+      name: "Neha R.",
+      text: "I got so many compliments. This brand is luxury!",
+      img: "https://randomuser.me/api/portraits/women/12.jpg",
+    },
+  ];
+
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    pauseOnHover: true,
+  };
 
   return (
     <div className="h-screen overflow-hidden flex bg-secondary-50">
@@ -187,88 +177,79 @@ const settings = {
         </motion.div>
       </div>
 
-      {/* RIGHT SIDE - BLACK & GOLD LUXURY PANEL */}
-<div className="hidden lg:flex w-1/2 relative bg-gray-100 px-4 items-center justify-center overflow-hidden">
+      {/* RIGHT SIDE */}
+      <div className="hidden lg:flex w-1/2 relative bg-gray-100 px-4 items-center justify-center overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative w-full flex flex-col justify-between p-5"
+        >
 
-  <motion.div
-    initial={{ opacity: 0, x: 40 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8 }}
-    className="relative w-full flex flex-col justify-between p-5"
-  >
-
-    {/* IMAGE SECTION */}
-    <div className="relative rounded-lg overflow-hidden shadow-2xl border border-yellow-500/30">
-
-      <img
-        src={loginbackground}
-        alt="Luxury Women's Collection"
-        className="object-cover w-full h-[65vh] hover:scale-105 transition-transform duration-700"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/10 to-transparent"></div>
-
-      {/* Premium Tag */}
-      <div className="absolute top-6 left-6 bg-black/70 backdrop-blur-md px-6 py-2 rounded-full border border-[#e5a852] text-[#e5a852] text-sm tracking-widest uppercase">
-        Luxury Collection
-      </div>
-
-      {/* Instagram Badge */}
-      <div className="absolute bottom-6 right-6 bg-linear-to-r from-yellow-700 to-[#e5a852] text-black px-4 py-1 rounded-full text-xs font-semibold shadow-lg">
-        #TrendingNow
-      </div>
-    </div>
-
-    {/* REVIEWS SECTION */}
-<div className="flex justify-center">
-  <div className="w-full 
-                  bg-linear-to-r from-black via-gray-900 to-black 
-                  rounded-lg p-6 
-                  border border-yellow-500/20 
-                  shadow-2xl">
-
-    <h3 className="text-[#e5a852] text-lg tracking-wider mb-6 text-center">
-      What Our Queens Say ✨
-    </h3>
-
-    <Slider {...settings}>
-      {reviewData.map((item) => (
-        <div key={item.id}>
-          <div className="flex items-center gap-4 justify-center text-center">
-
+          {/* IMAGE */}
+          <div className="relative rounded-lg overflow-hidden shadow-2xl border border-yellow-500/30">
             <img
-              src={item.img}
-              alt={item.name}
-              className="w-14 h-14 rounded-full 
-                         border-2 border-[#e5a852]"
+              src={loginbackground}
+              alt="Luxury Women's Collection"
+              className="object-cover w-full h-[65vh] hover:scale-105 transition-transform duration-700"
             />
 
-            <div>
-              <div className="flex justify-center text-yellow-400 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <FaStar key={i} size={12} />
-                ))}
-              </div>
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/10 to-transparent"></div>
 
-              <p className="text-gray-300 text-sm">
-                “{item.text}”
-              </p>
-
-              <span className="text-[#e5a852] text-xs block mt-1">
-                {item.name}
-              </span>
+            <div className="absolute top-6 left-6 bg-black/70 backdrop-blur-md px-6 py-2 rounded-full border border-[#e5a852] text-[#e5a852] text-sm tracking-widest uppercase">
+              Luxury Collection
             </div>
 
+            <div className="absolute bottom-6 right-6 bg-linear-to-r from-yellow-700 to-[#e5a852] text-black px-4 py-1 rounded-full text-xs font-semibold shadow-lg">
+              #TrendingNow
+            </div>
           </div>
-        </div>
-      ))}
-    </Slider>
-  </div>
-</div>
-  </motion.div>
 
-</div>
+          {/* REVIEWS */}
+          <div className="flex justify-center">
+            <div className="w-full bg-linear-to-r from-black via-gray-900 to-black rounded-lg p-6 border border-yellow-500/20 shadow-2xl">
+
+              <h3 className="text-[#e5a852] text-lg tracking-wider mb-6 text-center">
+                What Our Queens Say ✨
+              </h3>
+
+              <Slider {...settings}>
+                {reviewData.map((item) => (
+                  <div key={item.id}>
+                    <div className="flex items-center gap-4 justify-center text-center">
+
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="w-14 h-14 rounded-full border-2 border-[#e5a852]"
+                      />
+
+                      <div>
+                        <div className="flex justify-center text-yellow-400 mb-1">
+                          {[...Array(5)].map((_, i) => (
+                            <FaStar key={i} size={12} />
+                          ))}
+                        </div>
+
+                        <p className="text-gray-300 text-sm">
+                          “{item.text}”
+                        </p>
+
+                        <span className="text-[#e5a852] text-xs block mt-1">
+                          {item.name}
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+
+            </div>
+          </div>
+
+        </motion.div>
+      </div>
     </div>
   );
 };

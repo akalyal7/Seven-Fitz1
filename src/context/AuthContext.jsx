@@ -19,11 +19,12 @@ export const AuthProvider = ({ children }) => {
 
     const login = (email, password) => {
         // Mock login logic
+        const mockName = email.split('@')[0] || "User";
         const mockUser = {
-            id: "u123",
-            name: "john",
+            id: "u" + Math.random().toString(36).substr(2, 9),
+            name: mockName,
             email: email,
-            avatar: "https://ui-avatars.com/api/?name=Akash&background=random"
+            avatar: `https://ui-avatars.com/api/?name=${mockName}&background=random`
         };
         setUser(mockUser);
         localStorage.setItem('7fitz_user', JSON.stringify(mockUser));
@@ -45,6 +46,8 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         setUser(null);
         localStorage.removeItem('7fitz_user');
+        localStorage.removeItem('7fitz_cart');
+        localStorage.removeItem('7fitz_wishlist');
     };
 
     const value = {

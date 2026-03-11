@@ -164,20 +164,20 @@ const Profile = () => {
   }
 
   return (
-    <div className="relative bg-slate-50/50 py-14 px-4 md:px-6 overflow-hidden">
+    <div className="relative bg-slate-50/50 py-8 md:py-14 px-4 md:px-6 overflow-hidden min-h-screen">
 
       {/* background glow */}
-      <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-[#e5a852]/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-[80vw] md:w-[50vw] h-[80vw] md:h-[50vw] bg-[#e5a852]/5 blur-[80px] md:blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
-      <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12">
+      <div className="container mx-auto relative z-10 pt-16 md:pt-10">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-12">
 
           {/* Sidebar */}
-          <aside className="lg:w-80">
-            <div className="bg-white rounded-3xl p-8 shadow-xl shadow-black/5 border border-slate-200 sticky top-32">
+          <aside className="lg:w-80 w-full shrink-0">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-5 md:p-8 shadow-xl shadow-black/5 border border-slate-200 lg:sticky lg:top-24">
 
-              <div className="text-center mb-8">
-                <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-[#e5a852]/20 ring-4 ring-white shadow-lg">
+              <div className="text-center mb-6 md:mb-8 flex flex-row lg:flex-col items-center lg:items-center gap-4 lg:gap-0">
+                <div className="w-16 h-16 md:w-24 md:h-24 shrink-0 rounded-full overflow-hidden mb-0 lg:mb-4 border-2 md:border-4 border-[#e5a852]/20 ring-2 md:ring-4 ring-white shadow-lg mx-0 lg:mx-auto">
                   <img
                     src={user.avatar}
                     alt={user.name}
@@ -185,54 +185,58 @@ const Profile = () => {
                   />
                 </div>
 
-                <h2 className="text-xl font-serif font-bold">{user.name}</h2>
-                <p className="text-slate-500 text-sm mt-1">{user.email}</p>
+                <div className="text-left lg:text-center">
+                  <h2 className="text-lg md:text-xl font-serif font-bold">{user.name}</h2>
+                  <p className="text-slate-500 text-xs md:text-sm mt-1 truncate max-w-[200px] lg:max-w-none">{user.email}</p>
+                </div>
               </div>
 
-              <nav className="space-y-3">
+              <nav className="flex flex-row overflow-x-auto lg:flex-col gap-2 md:gap-3 pb-2 lg:pb-0 no-scrollbar">
 
                 <button
                   onClick={() => setActiveTab('orders')}
-                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'orders'
+                  className={`shrink-0 flex items-center justify-center lg:justify-start gap-2 md:gap-3 px-4 py-2.5 md:py-3 rounded-xl font-bold text-xs md:text-sm transition-all ${activeTab === 'orders'
                     ? 'bg-black text-[#e5a852]'
                     : 'bg-white border border-slate-200 text-slate-700 hover:bg-black hover:text-[#e5a852]'
                     }`}
                 >
-                  <ShoppingBag size={18} />
+                  <ShoppingBag size={18} className="w-4 h-4 md:w-5 md:h-5" />
                   Order History
                 </button>
 
                 <button
                   onClick={() => setActiveTab('addresses')}
-                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'addresses'
+                  className={`shrink-0 flex items-center justify-center lg:justify-start gap-2 md:gap-3 px-4 py-2.5 md:py-3 rounded-xl font-bold text-xs md:text-sm transition-all ${activeTab === 'addresses'
                     ? 'bg-black text-[#e5a852]'
                     : 'bg-white border border-slate-200 text-slate-700 hover:bg-black hover:text-[#e5a852]'
                     }`}
                 >
-                  <MapPin size={18} />
+                  <MapPin size={18} className="w-4 h-4 md:w-5 md:h-5" />
                   Saved Addresses
                 </button>
 
                 <button
                   onClick={() => setActiveTab('settings')}
-                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all ${activeTab === 'settings'
+                  className={`shrink-0 flex items-center justify-center lg:justify-start gap-2 md:gap-3 px-4 py-2.5 md:py-3 rounded-xl font-bold text-xs md:text-sm transition-all ${activeTab === 'settings'
                     ? 'bg-black text-[#e5a852]'
                     : 'bg-white border border-slate-200 text-slate-700 hover:bg-black hover:text-[#e5a852]'
                     }`}
                 >
-                  <Settings size={18} />
-                  Account Settings
+                  <Settings size={18} className="w-4 h-4 md:w-5 md:h-5" />
+                  Settings
                 </button>
 
                 <button
                   onClick={() => {
                     logout();
                     showToast('Logged out successfully');
-                    navigate('/');
+                    setTimeout(() => {
+                      window.location.href = '/';
+                    }, 500);
                   }}
-                  className="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-red-600 hover:bg-red-50 mt-4"
+                  className="shrink-0 flex items-center justify-center lg:justify-start gap-2 md:gap-3 px-4 py-2.5 md:py-3 rounded-xl font-medium text-red-600 hover:bg-red-50 lg:mt-4"
                 >
-                  <LogOut size={18} />
+                  <LogOut size={18} className="w-4 h-4 md:w-5 md:h-5" />
                   Sign Out
                 </button>
 
@@ -241,7 +245,7 @@ const Profile = () => {
           </aside>
 
           {/* Main Content */}
-          <main className="grow">
+          <main className="grow lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto pr-0 lg:pr-2 no-scrollbar">
 
             <AnimatePresence mode="wait">
 
@@ -255,11 +259,11 @@ const Profile = () => {
                   className="space-y-8"
                 >
 
-                  <div className="flex items-center justify-between">
-                    <h1 className="text-3xl md:text-4xl font-serif font-bold">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
                       My Orders
                     </h1>
-                    <span className="bg-black text-[#e5a852] px-4 py-1.5 rounded-full text-sm font-bold">
+                    <span className="bg-black self-start sm:self-auto text-[#e5a852] px-3 py-1.5 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-bold">
                       {orders.length} Orders
                     </span>
                   </div>
@@ -283,13 +287,13 @@ const Profile = () => {
                       orders.map((order) => (
                         <div
                           key={order.id}
-                          className="bg-white p-6 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                          className="bg-white p-4 md:p-6 rounded-2xl border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                         >
 
-                          <div className="flex flex-wrap items-center justify-between gap-6">
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 md:gap-6">
 
-                            <div className="flex items-center gap-6">
-                              <div className="w-16 h-20 rounded-lg overflow-hidden bg-slate-100">
+                            <div className="flex items-center gap-4 md:gap-6">
+                              <div className="w-14 h-18 md:w-16 md:h-20 shrink-0 rounded-lg overflow-hidden bg-slate-100">
                                 <img
                                   src={order.image || 'https://via.placeholder.com/100'}
                                   alt="Order"
@@ -298,31 +302,31 @@ const Profile = () => {
                               </div>
 
                               <div>
-                                <h3 className="font-bold text-lg">{order.id}</h3>
-                                <p className="text-sm text-slate-500">
-                                  Placed on {order.date} • {order.items} Items
+                                <h3 className="font-bold text-base md:text-lg">{order.id}</h3>
+                                <p className="text-xs md:text-sm text-slate-500">
+                                  {order.date} • {order.items} Items
                                 </p>
                               </div>
                             </div>
 
-                            <div className="flex items-center gap-8">
+                            <div className="flex items-center justify-between sm:justify-end gap-6 md:gap-8 w-full sm:w-auto pt-4 sm:pt-0 border-t sm:border-transparent border-slate-100 mt-2 sm:mt-0">
 
                               <div>
-                                <p className="text-xs text-slate-400 uppercase font-bold">
+                                <p className="text-[10px] md:text-xs text-slate-400 uppercase font-bold">
                                   Total
                                 </p>
-                                <p className="font-bold">
+                                <p className="font-bold text-sm md:text-base">
                                   ₹{order.total.toFixed(2)}
                                 </p>
                               </div>
 
                               <div>
-                                <p className="text-xs text-slate-400 uppercase font-bold">
+                                <p className="text-[10px] md:text-xs text-slate-400 uppercase font-bold mb-1">
                                   Status
                                 </p>
 
                                 <span
-                                  className={`px-3 py-1 text-xs font-bold rounded-full ${order.status === 'Delivered'
+                                  className={`px-2 py-0.5 md:px-3 md:py-1 text-[10px] md:text-xs font-bold rounded-full ${order.status === 'Delivered'
                                     ? 'bg-green-100 text-green-700'
                                     : 'bg-black text-[#e5a852]'
                                     }`}
@@ -335,9 +339,9 @@ const Profile = () => {
                                 onClick={() =>
                                   navigate(`/track-order/${order.id.replace('#', '')}`)
                                 }
-                                className="p-3 bg-black text-[#e5a852] rounded-xl hover:bg-[#e5a852] hover:text-black transition-all"
+                                className="p-2 md:p-3 bg-black text-[#e5a852] rounded-xl hover:bg-[#e5a852] hover:text-black transition-all"
                               >
-                                <ChevronRight size={20} />
+                                <ChevronRight size={18} className="md:w-5 md:h-5" />
                               </button>
 
                             </div>
@@ -359,16 +363,16 @@ const Profile = () => {
                   className="space-y-8"
                 >
 
-                  <div className="flex justify-between items-center">
-                    <h1 className="text-3xl md:text-4xl font-serif font-bold">
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
                       Saved Addresses
                     </h1>
 
                     <button
                       onClick={() => setIsAddressModalOpen(true)}
-                      className="bg-black text-[#e5a852] px-6 py-2 rounded-full font-bold hover:bg-[#e5a852] hover:text-black transition-all"
+                      className="bg-black w-full sm:w-auto text-[#e5a852] px-6 py-2.5 md:py-2 rounded-xl sm:rounded-full font-bold text-sm hover:bg-[#e5a852] hover:text-black transition-all"
                     >
-                      Add New
+                      + Add New
                     </button>
                   </div>
 

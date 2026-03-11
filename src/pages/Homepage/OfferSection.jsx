@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ShoppingBag, ArrowRight } from "lucide-react";
-import offerImage from "../../assets/Images/sale.png";
+import offerimage from "../../assets/Images/offer.jpg"
 
 const OfferSection = () => {
   return (
@@ -23,7 +23,7 @@ const OfferSection = () => {
         </div>
 
         {/* Offer Card */}
-        <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 p-10 md:p-16 grid md:grid-cols-2 gap-12 items-center">
+        <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition duration-300 p-6 sm:p-10 md:p-16 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 
           {/* LEFT - Image */}
           <motion.div
@@ -32,17 +32,17 @@ const OfferSection = () => {
             transition={{ duration: 0.8 }}
             className="relative flex justify-center"
           >
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-md">
+            <div className="relative w-full max-w-[280px] sm:max-w-sm aspect-square md:w-96 md:h-96 rounded-2xl overflow-hidden shadow-md">
               <img
-                src={offerImage}
+                src={offerimage}
                 alt="Special Offer"
                 className="w-full h-full object-cover"
               />
             </div>
 
-            <div className="absolute -top-4 -right-4 bg-[#e5a852] text-white text-sm px-5 py-2 rounded-full shadow-md font-semibold">
+            {/* <div className="absolute -top-4 -right-4 bg-[#e5a852] text-white text-sm px-5 py-2 rounded-full shadow-md font-semibold">
               70% OFF
-            </div>
+            </div> */}
           </motion.div>
 
           {/* RIGHT - Content */}
